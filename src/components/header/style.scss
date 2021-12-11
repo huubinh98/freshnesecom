@@ -1,0 +1,122 @@
+@import '../../assets/css/style.scss';
+
+.header {
+    --height-header: 178px;
+    --height-headercontact: 48px;
+
+    max-width: 1260px;
+    margin: auto;
+    height: var(--height-header);
+    padding-left: 45px;
+    padding-right: 45px;
+
+    &__contact {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: var(--height-headercontact);
+        border-bottom: 1px solid rgba(21, 21, 21, 0.05);
+        &-list {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 33px;
+            height: 100%;
+        }
+        &-item {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            font-size: 12px;
+            margin: auto;
+            a {
+                color: #6A983C;
+                display: block;
+                padding: 18px 0;
+            }
+            span {
+                color: #151515;
+            }
+        }
+    }
+
+    &__search {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        height: calc(var(--height-header) - var(--height-headercontact));
+        .logo {
+            h1 {
+                display: none;
+            }
+        }
+        .form__search {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            width: 500px;
+            // width: 100%; 
+            height: 42px;
+            background-color: #F9F9F9;
+            border: 1px solid #D1D1D1;
+            border-radius: 12px;
+            .category {
+                position: relative;
+                cursor: pointer;
+                position: relative;
+                padding-left: 16px;
+                margin-right:24px;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                .current {
+                    display: flex;
+                    align-items: center;
+                    height: 100%;
+                    span {
+                        padding-right: 14px;
+                    }
+                }
+                .option {
+                    position: absolute;
+                    bottom: -40px;
+                    width: 100%;
+                    display: none;
+                }
+            }
+            input {
+                border: none;
+                padding-left: 24px;
+                flex: 1;
+                outline: none;
+                font-size: 14px;
+                line-height: 19px;
+                border-left: 1px solid #D1D1D1;
+                background-color: transparent;
+            }
+
+            ::placeholder {
+                color: #A9A9A9;
+            }
+
+            .btn__search {
+                height: 100%;
+                display: flex;
+                align-items: center;
+                padding: 0 16px;
+                img {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
+        &-left {
+            display: flex;
+            gap: 40px;
+        }
+    }
+}
