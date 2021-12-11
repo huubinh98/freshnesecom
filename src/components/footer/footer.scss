@@ -11,7 +11,7 @@
 
         .footer-item {
             h5 {
-                font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+                font-family: p;
                 font-size: 18px;
                 font-weight: 600;
                 line-height: 27px;
@@ -21,7 +21,7 @@
 
             .item-list {
                 li {
-                    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+                    font-family: os;
                     font-size: 14px;
                     font-weight: 400;
                     line-height: 19px;
@@ -41,7 +41,7 @@
     .product-tags {
         margin-bottom: 30px;
         h5 {
-            font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-family: p;
             font-size: 18px;
             font-weight: 600;
             line-height: 27px;
@@ -55,7 +55,8 @@
             max-width: 1084px;
 
             .tag-item {
-                font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+                cursor: pointer;
+                font-family: os;
                 font-size: 12px;
                 font-weight: 600;
                 line-height: 18px;
@@ -70,7 +71,7 @@
     }
 
     .coppy-right {
-        font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-family: os;
         font-size: 14px;
         font-weight: 400;
         line-height: 19px;
