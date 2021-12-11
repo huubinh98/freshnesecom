@@ -1,0 +1,65 @@
+@import '../../assets/css/style.scss';
+
+.footer {
+    padding: 64px 0;
+
+    .footer_list {
+        @include flex(flex-start, space-between);
+        margin-bottom: 50px;
+
+        &-item {
+            h5 {
+                @include text(18px, p, 27px, $black15, none);
+                font-weight: 600;
+                margin-bottom: 16px;
+            }
+
+            .item-list {
+                li {
+                    @include text(14px, os, 19px, $green-cl, none);
+                    font-weight: 400;
+                    line-height: 19px;
+                    cursor: pointer;
+                    margin-bottom: 16px;
+                    @include transition($t);
+
+                    &:hover {
+                        color: $black15;
+                    }
+                }
+            }
+        }
+    }
+
+    .product-tags {
+        margin-bottom: 30px;
+
+        h5 {
+            @include text(18px, p, 27px, $black15, none);
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .tag_list {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1084px;
+
+            .tag-item {
+                @include text(12px, os, 18px, $black15, none);
+                cursor: pointer;
+                font-weight: 600;
+                padding: 4px 10px;
+                border-radius: 12px;
+                background-color: #f5f5f5;
+                margin-right: 16px;
+                margin-bottom: 16px;
+            }
+        }
+    }
+
+    .coppy-right {
+        @include text(14px, os, 19px, $black15, none);
+        font-weight: 400;
+    }
+}
