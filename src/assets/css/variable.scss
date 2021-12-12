@@ -19,10 +19,16 @@ $lg-max: ($lg-min - 1); // Large Desktop
 //=====================================CÁC BIẾN KHÔNG THAY ĐỔI GIÁ TRỊ KHI RESPONSIVE======================================
 // colors - tuỳ chỉnh
 $white-cl: #fff;
-$black-cl: #000;
-$green-cl: rgba(106, 152, 60, 1);
+$white-f5: #f5f5f5;
+$green-cl: #6A983C;
+$green-border: #46760A;
+$green-f4: #F4F8EC;
 $black15: #151515;
-
+$gray-cl: #A9A9A9;
+$bg-nav: #f9f9f9;
+$orange-cl: #E6704B;
+$yellow-cl: #FDBC15;
+$d1: #d1d1d1;
 
 
 // timing transition - tuỳ chỉnh
@@ -35,41 +41,26 @@ $t: 0.4s;
 
     // font-size & line-height heading
 
-    --h1-fs: 8rem;
-    --h1-lh: 7rem;
+    --h1-fs: 3.2rem;
+    --h1-lh: 5.2rem;
 
-    --h2-fs: 4.4rem;
-    --h2-lh: 5.045rem;
+    --h2-fs: 2.2rem;
+    --h2-lh: 3.6rem;
 
-    --h3-fs: 3.2rem;
-    --h3-lh: 5.045rem;
+    --h3-fs: 1.8rem;
+    --h3-lh: 3rem;
 
-    --h4-fs: 2.6rem;
-    --h4-lh: 5.045rem;
-
-    --h5-fs: 1.8rem;
-    --h5-lh: 4rem;
-
-    --body12-fs: 1.2rem;
-    --body12-lh: 4rem;
+    --h4-fs: 1.5rem;
+    --h4-lh: 2.5rem;
 
     --body14-fs: 1.4rem;
     --body14-lh: 2rem;
 
-    --lh-46: 4.6rem;
-
-    --number-fs: 9rem;
-    --number-lh: 5.527rem;
-
+    --pd-section: 64px 0;
 
     // Genaral Variable
 
-    --gap: 30px; // gap này sử dụng cho gap cột & padding của container, container-fluid
-
-    --height-header: 70px;
-    --height-button: 56px;
-    --ptop: 150px;
-    --pd-section: 120px;
+    --gap: 45px; // gap này sử dụng cho gap cột & padding của container, container-fluid
 
     @media (max-width: $sm-max) {
         // Tablet
@@ -77,36 +68,5 @@ $t: 0.4s;
 
     @media (max-width: $xs-max) {
         // Mobile
-        --h1-fs: 3.6rem;
-        --h1-lh: 4.2rem;
-
-        --h2-fs: 2.8rem;
-        --h2-lh: 3.8rem;
-
-        --h3-fs: 2rem;
-        --h3-lh: 3rem;
-
-        --h4-fs: 2rem;
-        --h4-lh: 3.2rem;
-
-        --h5-fs: 1.5rem;
-        --h5-lh: 4rem;
-
-        --body12-fs: 1.1rem;
-        --body12-lh: 4rem;
-
-        --body14-fs: 1.1rem;
-        --body14-lh: 2rem;
-
-        --lh-46: 2.6rem;
-
-        --number-fs: 7rem;
-        --number-lh: 5.527rem;    
-
-        --gap: 40px;
-
-        --height-header: 70px;
-        --pd-section: 50px;
-        --ptop: 120px;
     }
 }
