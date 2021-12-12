@@ -4,21 +4,27 @@ import Tags from './Tags'
 
 
 export default function Footer() {
+    let tagList = ['Beans', 'Carrots', 'Apples', 'Garlic', 'Mushrooms', 'Tomatoes', 'Chillies Peppers']
+
+    const tagItem = tagList.map((item) => {
+        return <div className='tag-item'>{item}</div>
+    })
+
     return (
         <div className='footer container-fluid'>
-           <div className='footer_list'>
-               <div className='footer_list-item'>
-                    <h5>Get In Touch</h5>
+            <div className='footer_list'>
+                <div className='footer_list-item'>
+                    <h3>Get In Touch</h3>
                     <ul className='item-list'>
                         <li>About Us</li>
                         <li>Careers</li>
                         <li>Press Releases</li>
                         <li>Blog</li>
                     </ul>
-               </div>
+                </div>
 
-               <div className='footer_list-item'>
-                    <h5>Connections</h5>
+                <div className='footer_list-item'>
+                    <h3>Connections</h3>
                     <ul className='item-list'>
                         <li>Facebook</li>
                         <li>Twitter</li>
@@ -26,19 +32,19 @@ export default function Footer() {
                         <li>Youtube</li>
                         <li>LinkedIn</li>
                     </ul>
-               </div>
+                </div>
 
-               <div className='footer_list-item'>
-                    <h5>Earnings</h5>
+                <div className='footer_list-item'>
+                    <h3>Earnings</h3>
                     <ul className='item-list'>
                         <li>Become an Affiliate</li>
                         <li>Advertise your product</li>
                         <li>Sell on Market</li>
                     </ul>
-               </div>
+                </div>
 
-               <div className='footer_list-item'>
-                    <h5>Account</h5>
+                <div className='footer_list-item'>
+                    <h3>Account</h3>
                     <ul className='item-list'>
                         <li>Your account</li>
                         <li>Returns Centre</li>
@@ -46,26 +52,16 @@ export default function Footer() {
                         <li>Chat with us</li>
                         <li>Help</li>
                     </ul>
-               </div>
+                </div>
 
-           </div>
+            </div>
 
-           <div className='product-tags'>
-               <h5>Product tags</h5>
-               <div className='tag_list'>
-                    <Tags tag='Beans'/>
-                    <Tags tag='Beans'/>
-                    <Tags tag='Beans'/>
-                    <Tags tag='Beans'/>
-                    <Tags tag='Beans'/>
-                    <Tags tag='Beans'/>
-                    <Tags tag='Beans'/>
-                    <Tags tag='Beans'/>
-                    <Tags tag='Beans'/>
-                    <Tags tag='Beans'/>
-               </div>
-            
-           </div>
+            <div className='product-tags'>
+                <h3>Product tags</h3>
+                <div className='tag_list'>
+                    <Tags tag={tagItem} />
+                </div>
+            </div>
 
             <span className='coppy-right'>Copyright © 2020 petrbilek.com</span>
         </div>
