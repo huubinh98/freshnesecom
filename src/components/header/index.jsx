@@ -13,7 +13,7 @@ export default function Header() {
         email: 'info@freshnesecom.com'
     }
 
-    let contactList = ["Blog", "About us", "Carrers"]
+    let contactList = ["Blog", "About us", "Carrers", "hello"]
     const contum = contactList.map(function(item) {
         return <li className='header__contact-item'>
                     <a href='#'>{item}</a>
