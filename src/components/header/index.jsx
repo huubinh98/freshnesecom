@@ -6,9 +6,22 @@ import User from './User'
 import Cart from './Cart'
 
 export default function Header() {
+
+    let contact = {
+        chat: 'Chat with us',
+        phone: '+420 336 775 664',
+        email: 'info@freshnesecom.com'
+    }
+
+    let contactList = ["Blog", "About us", "Carrers"]
+    const contum = contactList.map(function(item) {
+        return <li className='header__contact-item'>
+                    <a href='#'>{item}</a>
+                </li>   
+    })
     return (
         <div className='header'>
-            <HeaderContact />
+            <HeaderContact props = {contact} item = {contum}/>
             <div className='header__search'>
                 <div className="logo">
                     <h1>ReactShop</h1>

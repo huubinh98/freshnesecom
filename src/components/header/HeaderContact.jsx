@@ -1,29 +1,21 @@
 import React from 'react'
 
-export default function HeaderContact() {
+export default function HeaderContact({props, item}) {
     return (
         <div className='header__contact'>
             <ul className="header__contact-list">
                 <li className='header__contact-item'>
-                    <a href='#'>Chat with us</a>
+                    <a href='#'>{props.chat}</a>
                 </li>
                 <li className='header__contact-item'>
-                    <span>+420 336 775 664</span>
+                    <span>{props.phone}</span>
                 </li>
                 <li className='header__contact-item'>
-                    <span>info@freshnesecom.com</span>
+                    <span>{props.email}</span>
                 </li>
             </ul>
             <ul className="header__contact-list">
-                <li className='header__contact-item'>
-                    <a href='#'>Blog</a>
-                </li>
-                <li className='header__contact-item'>
-                    <a href='#'>About us</a>
-                </li>
-                <li className='header__contact-item'>
-                    <a href='#'>Careers</a>
-                </li>
+                {item}
             </ul>
         </div>
     )
