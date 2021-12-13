@@ -1,0 +1,23 @@
+@import "../../assets/css/style.scss";
+
+.drop__menu {
+    --height: 75px;
+    background-color: $bg-nav;
+    height: var(--height);
+    @include flex(center, flex-start);
+    &-list {
+        @include flex(center, flex-start);
+        margin: 0 -20px;
+    }
+    &-item {
+        padding: 0 20px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        @include text(var(--h4-fs), p, var(--h4-lh), $black15, none);
+        font-weight: 500;
+        span {
+            margin-right: 6px;
+        }
+    }
+}

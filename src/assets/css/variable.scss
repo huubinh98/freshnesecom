@@ -1,7 +1,7 @@
 //======================================================BOXED LAYOUT=======================================================
 
 $container-max-width: 100%;
-$container-width: 1030px; // tùy thuộc vào container của bản thiết kế // $container-width = container (đo từ bản thiết kế) + 30px
+$container-width: 1260px; // tùy thuộc vào container của bản thiết kế // $container-width = container (đo từ bản thiết kế) + 30px
 
 /*GRID - media queries breakpoints*/
 $xxs-min: 576px; // CÓ THỂ TÙY CHỈNH
@@ -55,6 +55,9 @@ $t: 0.4s;
 
     --body14-fs: 1.4rem;
     --body14-lh: 2rem;
+
+    --body12-fs: 1.2rem;
+    --body12-lh: 1.6rem;
 
     --pd-section: 64px 0;
 

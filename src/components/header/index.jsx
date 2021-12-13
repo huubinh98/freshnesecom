@@ -13,15 +13,16 @@ export default function Header() {
         email: 'info@freshnesecom.com'
     }
 
-    let contactList = ["Blog", "About us", "Carrers", "hello"]
-    const contum = contactList.map(function(item) {
+    let contactList = ["Blog", "About us", "Carrers"]
+    const contactItem = contactList.map(function(item) {
         return <li className='header__contact-item'>
                     <a href='#'>{item}</a>
                 </li>   
     })
     return (
         <div className='header'>
-            <HeaderContact props = {contact} item = {contum}/>
+            <div className="container-fluid">
+            <HeaderContact props = {contact} item = {contactItem}/>
             <div className='header__search'>
                 <div className="logo">
                     <h1>ReactShop</h1>
@@ -46,6 +47,7 @@ export default function Header() {
                     <User />
                     <Cart />
                 </div>
+            </div>
             </div>
         </div>
     )
