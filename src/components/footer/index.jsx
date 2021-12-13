@@ -6,8 +6,11 @@ import Tags from './Tags'
 export default function Footer() {
     let tagList = ['Beans', 'Carrots', 'Apples', 'Garlic', 'Mushrooms', 'Tomatoes', 'Chillies Peppers']
 
-    const tagItem = tagList.map((item) => {
-        return <div className='tag-item'>{item}</div>
+
+    // const tag = FOOTER.content.map((e,i)=><div className={`tag-item ${item.active ? "active":""}`} key={index}>{item}</div>)
+
+    const tagItem = tagList.map((item, index) => {
+        return <div className='tag-item' key={index}>{item}</div>
     })
 
     return (
