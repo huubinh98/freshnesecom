@@ -21,6 +21,7 @@ export default function Header() {
     })
     return (
         <div className='header'>
+            <div className="container-fluid">
             <HeaderContact props = {contact} item = {contactItem}/>
             <div className='header__search'>
                 <div className="logo">
@@ -46,6 +47,7 @@ export default function Header() {
                     <User />
                     <Cart />
                 </div>
+            </div>
             </div>
         </div>
     )

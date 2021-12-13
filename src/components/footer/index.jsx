@@ -11,7 +11,7 @@ export default function Footer() {
     })
 
     return (
-        <div className='footer'>
+        <div className='footer container-fluid'>
             <div className='footer_list'>
                 <div className='footer_list-item'>
                     <h3>Get In Touch</h3>
