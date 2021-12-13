@@ -1,16 +1,18 @@
-<<<<<<< HEAD
+import DropdownMenu from "./components/dropdownmenu";
+import Footer from "./components/footer";
 import Header from "./components/header";
 
-function App() {
-  return (
-    <Header />
-=======
-import Footer from "./components/footer";
+import "./assets/css/style.scss";
+import HomePage from "./pages/homepage/HomePage";
 
 function App() {
   return (
-    <Footer/>
->>>>>>> master
+    <>
+      <Header />
+      <DropdownMenu />
+      <HomePage />
+      <Footer />
+    </>
   );
 }
 
