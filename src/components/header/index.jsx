@@ -2,8 +2,8 @@ import React from 'react'
 import "./style.scss"
 import HeaderContact from './HeaderContact'
 import Search from './Search'
-import User from './User'
 import Cart from './Cart'
+import Account from './Account'
 
 export default function Header() {
 
@@ -43,7 +43,7 @@ export default function Header() {
                 </div>
                 <Search />
                 <div className='header__search-left'>
-                    <User />
+                    <Account />
                     <Cart />
                 </div>
             </div>
