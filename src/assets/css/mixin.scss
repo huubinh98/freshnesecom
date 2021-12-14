@@ -243,3 +243,10 @@
 @mixin paddingimg($width, $height) {
 	padding-bottom: $height / $width * 100%;
 }
+
+@mixin css3($name, $value) {
+	#{$name}: $value;
+	-webkit-#{$name}: $value;
+	-moz-#{$name}: $value;
+	-o-#{$name}: $value;
+}
