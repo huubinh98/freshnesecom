@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function User() {
+export default function Account() {
     return (
         <div>
             <a href="">
