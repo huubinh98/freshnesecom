@@ -1,8 +1,10 @@
 import React from 'react'
+import './style.scss'
 
-export default function HomePage() {
+export default function CategoryBar() {
     return (
         <div>
+            
         </div>
     )
 }
