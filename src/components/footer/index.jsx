@@ -6,13 +6,6 @@ import Tags from './Tags'
 export default function Footer() {
     let tagList = ['Beans', 'Carrots', 'Apples', 'Garlic', 'Mushrooms', 'Tomatoes', 'Chillies Peppers']
 
-
-    // const tag = FOOTER.content.map((e,i)=><div className={`tag-item ${item.active ? "active":""}`} key={index}>{item}</div>)
-
-    const tagItem = tagList.map((item, index) => {
-        return <div className='tag-item' key={index}>{item}</div>
-    })
-
     return (
         <div className='footer container-fluid'>
             <div className='footer_list'>
@@ -62,7 +55,7 @@ export default function Footer() {
             <div className='product-tags'>
                 <h3>Product tags</h3>
                 <div className='tag_list'>
-                    <Tags tag={tagItem} />
+                    <Tags tag={tagList} />
                 </div>
             </div>
 

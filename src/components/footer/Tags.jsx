@@ -4,7 +4,7 @@ export default function Tags({ tag }) {
 
     return (
         <>
-            {tag}
+            {tag.map((item) => <div className='tag-item' >{item}</div>)}
         </>
     )
 }
