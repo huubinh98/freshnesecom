@@ -1,0 +1,39 @@
+@import "../../assets/css/style.scss";
+
+
+.tabs {
+    width: 700px;
+    border: 2px solid $gray-cl;
+    margin: 20px auto;
+    height: 200px;
+    &-title {
+        @include flex(center, flex-start);
+        height: 50px;
+        background-color: $gray-cl;
+        &-item {
+            padding: 0 30px;
+            height: 100%;
+            line-height: 50px;
+            border-right: 1px solid #ccc;
+            cursor: pointer;
+            &.active {
+                background-color: #fff;
+                border-bottom: 2px solid $white-cl;
+            }
+        }
+    }
+    &-content {
+        padding: 20px;
+        h2 {
+            padding-bottom: 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .content-item {
+            display: none;
+            &.active {
+                display: block;
+            }
+        }
+    }
+}
