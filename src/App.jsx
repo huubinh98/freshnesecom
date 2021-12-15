@@ -1,19 +1,21 @@
-import DropdownMenu from "./components/dropdownmenu";
-import Footer from "./components/footer";
-import Header from "./components/header";
+import DropdownMenu from "./components/DropdownMenu";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
 
 import "./assets/css/style.scss";
-import HomePage from "./pages/homepage";
-import Button from "./components/button";
-import IconArowBtn from "./components/icon";
+import HomePage from "./pages/Homepage";
+import Button from "./components/Button";
+import { IconArowBtn } from "./components/Icon";
+import Tabs from "./components/Tabs";
+import SideMenu from "./components/SideMenu";
 
 function App() {
   return (
     <>
       <Header />
       <DropdownMenu />
-      <Button type="icon-right" icon={<IconArowBtn />}>Buy now</Button>
       <HomePage />
+      <Tabs />
       <Footer />
     </>
   );
