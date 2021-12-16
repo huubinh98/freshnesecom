@@ -1,20 +1,19 @@
-import DropdownMenu from "./components/DropdownMenu";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-
-import "./assets/css/style.scss";
+import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
 import HomePage from "./pages/Homepage";
-import Tabs from "./components/Tabs";
+import MainLayout from "./layout/MainLayout";
+import "./assets/css/style.scss";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
-    <>
-      <Header />
-      <DropdownMenu />
-      <HomePage />
-      <Tabs />
-      <Footer />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<MainLayout />}>
+          <Route path="/" element={<HomePage />} />
+        </Route>
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

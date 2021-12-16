@@ -1,12 +1,14 @@
 import React from "react";
-import { Link, Outlet } from "react-router-dom";
-import Footer from "../../components/footer";
-import Header from "../../components/header";
+import { Outlet } from "react-router-dom";
+import DropdownMenu from "../../components/DropdownMenu";
+import Footer from "../../components/Footer";
+import Header from "../../components/Header";
 
-export default function index() {
+export default function MainLayout() {
   return (
     <div>
       <Header />
+      <DropdownMenu />
       <Outlet />
       <Footer />
     </div>

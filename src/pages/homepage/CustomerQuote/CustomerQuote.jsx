@@ -1,5 +1,5 @@
 import React from "react";
 
-export default function BestProduct() {
+export default function CustomerQuote() {
   return <div></div>;
 }
