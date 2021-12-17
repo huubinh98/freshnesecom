@@ -1,0 +1,133 @@
+@import '../../assets/css/style.scss';
+
+.blogItem {
+    // max-width: 270px;
+    width: 100%;
+
+    .blogImg {
+        position: relative;
+        min-height: 180px;
+        width: 100%;
+        overflow: hidden;
+        margin-bottom: 24px;
+        border-radius: 12px;
+
+        img {
+            @include midimg(100%);
+            @include transition($t);
+        }
+    }
+
+    .blogContent {
+        .blogTitle {
+            @include text(var(--h3-fs), pb, var(--h3-lh), $black15, none);
+            margin-bottom: 16px;
+            display: block
+        }
+
+        .blogAuthor {
+            @include flex(center, normal);
+
+            span {
+                @include text(var(--body12-fs), os, var(--body12-lh), $black15, none);
+            }
+
+            img {
+                @include size(32px);
+                border-radius: 50%;
+                margin-right: 8px;
+                display: none;
+            }
+
+            .author {
+                margin-right: 16px;
+            }
+        }
+    }
+
+    &:hover {
+        .blogImg {
+            img {
+                @include transform(scale(1.1) translate(-50%, -50%))
+            }
+        }
+    }
+
+    &.size {
+
+        &-medium {
+            max-width: 270px;
+        }
+
+        &-large {
+            position: relative;
+            width: 100%;
+
+            .blogImg {
+                min-height: 400px;
+
+                &::after {
+                    position: absolute;
+                    content: '';
+                    width: 100%;
+                    height: 206px;
+                    border-radius: 0 0 12px 12px;
+                    bottom: 0;
+                    left: 0;
+                    background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+                }
+            }
+
+            .tag-item {
+                position: absolute;
+                top: 5%;
+                left: 5%;
+            }
+
+            .blogContent {
+                position: absolute;
+                bottom: 10%;
+                left: 5%;
+
+                .blogTitle {
+                    @include text(var(--h2-fs), pb, var(--h2-lh), $white-cl, none);
+                }
+
+                .blogAuthor {
+                    img {
+                        display: inline-block;
+                    }
+
+                    span {
+                        color: $white-cl;
+                    }
+                }
+            }
+        }
+
+        &-small {
+            @include flex(center, space-between);
+            flex-direction: row-reverse;
+            // max-width: 500px;
+
+            .blogImg {
+                @include size(96px);
+                min-height: 96px;
+            }
+
+            .tag-item {
+                display: none;
+            }
+
+            .blogContent {
+
+                .blogTitle {
+                    @include text(var(--h5-fs), p, var(--h5-lh), $black15, none);
+                    max-width: 230px;
+                }
+            }
+        }
+    }
+
+
+}

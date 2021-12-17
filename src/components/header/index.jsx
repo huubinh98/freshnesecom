@@ -23,7 +23,7 @@ export default function Header() {
   });
   return (
     <header className="header">
-      <div className="container-fluid">
+      <div className="container">
         <HeaderContact props={contact} item={contactItem} />
         <div className="header__search">
           <div className="logo">
