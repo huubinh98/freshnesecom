@@ -14,7 +14,6 @@ export default function Tabs() {
   return (
     <div className="tabs">
       <div className="tabs-title">
-        {/* nếu là so sánh số thì nên để hai dấu bằng thôi nha */}
         <div
           className={`tabs-title-item ${tab == 1 ? "active" : ""}`}
           onClick={() => handledTabClick(1)}
