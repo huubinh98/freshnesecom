@@ -5,6 +5,10 @@
         @include flex(center, flex-start);
         padding: var(--pd-section);
         gap: 32px;
+        .container {
+            display: flex;
+            gap: 32px;
+        }
         .cate {
             width: 270px;
         }
@@ -17,6 +21,10 @@
         @include flex(center, flex-start);
         padding: var(--pd-section);
         gap: 32px;
+        .container {
+            display: flex;
+            gap: 32px;
+        }
         .cate {
             width: 270px;
         }

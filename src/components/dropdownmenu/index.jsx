@@ -24,8 +24,10 @@ export default function DropdownMenu() {
   });
 
   return (
-    <div className="drop__menu container-fluid">
-      <DropItem dropItem={dropItem} />
+    <div className="drop__menu">
+      <div className="container">
+        <DropItem dropItem={dropItem} />
+      </div>
     </div>
   );
 }
