@@ -1,19 +1,25 @@
-import React from 'react'
-import './style.scss'
-import avt from '../../assets/img/avt.jpg';
+import React from "react";
+import "./style.scss";
+import data from "../../mocks";
 
-export const QuoteItem = ({ content, title }) => {
+export const QuoteItem = () => {
+  const { quoteList } = data;
 
-    return (
-        <div className="quoteItem">
-            <div className='quoteContent'>
-                <h4>{content}</h4>
-
-                <p>{title}</p>
+  return (
+    <>
+      {quoteList.map((item) => {
+        return (
+          <div className="quoteItem" key={item.id}>
+            <div className="quoteContent">
+              <h4>{item.content}</h4>
+              <p>{item.title}</p>
             </div>
-            <div className='quoteImg'>
-                <img src={avt} alt="avt" />
+            <div className="quoteImg">
+              <img src={item.image} alt="avt" />
             </div>
-        </div>
-    )
-}
+          </div>
+        );
+      })}
+    </>
+  );
+};

@@ -3,17 +3,6 @@ import "./style.scss";
 import Tags from "../Tags";
 
 export default function Footer() {
-  // nên khai báo là const vì nó là hằng. không thay đổi được. Nó là dữ liệu cứng mà.
-  let tagList = [
-    "Beans",
-    "Carrots",
-    "Apples",
-    "Garlic",
-    "Mushrooms",
-    "Tomatoes",
-    "Chillies Peppers",
-  ];
-
   // Tập sử dụng map nhiêu ở những trượng hợp này nha.
 
   return (
@@ -64,7 +53,7 @@ export default function Footer() {
       <div className="product-tags">
         <h3>Product tags</h3>
         <div className="tag_list">
-          <Tags tag={tagList} />
+          <Tags />
         </div>
       </div>
 

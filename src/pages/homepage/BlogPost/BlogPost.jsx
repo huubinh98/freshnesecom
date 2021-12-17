@@ -4,7 +4,7 @@ import "./blogpost.scss";
 
 export default function BlogPost() {
   return (
-    <div className="blog-post">
+    <div className="blog__post">
       <div className="container">
         <div className="blog_list">
           <div className="left">

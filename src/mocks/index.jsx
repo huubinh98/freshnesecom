@@ -49,6 +49,79 @@ const data = {
       priceMain: 2.0,
     },
   ],
+
+  quoteList: [
+    {
+      id: 1,
+      content:
+        "“ This is an super space for your customers qoute. Don’t worry it works smooth as pie. You will get all what you need by writiing a text here “",
+      title: "Name and Surname",
+      image:
+        "https://i.pinimg.com/736x/2a/b9/13/2ab913a8b60dec5d5affbab98e2c0020.jpg",
+    },
+    {
+      id: 2,
+      content:
+        "“ This is an super space for your customers qoute. Don’t worry it works smooth as pie. You will get all what you need by writiing a text here “",
+      title: "Name and Surname",
+      image:
+        "https://i.pinimg.com/736x/2a/b9/13/2ab913a8b60dec5d5affbab98e2c0020.jpg",
+    },
+    {
+      id: 3,
+      content:
+        "“ This is an super space for your customers qoute. Don’t worry it works smooth as pie. You will get all what you need by writiing a text here “",
+      title: "Name and Surname",
+      image:
+        "https://i.pinimg.com/736x/2a/b9/13/2ab913a8b60dec5d5affbab98e2c0020.jpg",
+    },
+    {
+      id: 4,
+      content:
+        "“ This is an super space for your customers qoute. Don’t worry it works smooth as pie. You will get all what you need by writiing a text here “",
+      title: "Name and Surname",
+      image:
+        "https://i.pinimg.com/736x/2a/b9/13/2ab913a8b60dec5d5affbab98e2c0020.jpg",
+    },
+    {
+      id: 5,
+      content:
+        "“ This is an super space for your customers qoute. Don’t worry it works smooth as pie. You will get all what you need by writiing a text here “",
+      title: "Name and Surname",
+      image:
+        "https://i.pinimg.com/736x/2a/b9/13/2ab913a8b60dec5d5affbab98e2c0020.jpg",
+    },
+    {
+      id: 6,
+      content:
+        "“ This is an super space for your customers qoute. Don’t worry it works smooth as pie. You will get all what you need by writiing a text here “",
+      title: "Name and Surname",
+      image:
+        "https://i.pinimg.com/736x/2a/b9/13/2ab913a8b60dec5d5affbab98e2c0020.jpg",
+    },
+  ],
+
+  tagList: [
+    "Beans",
+    "Carrots",
+    "Apples",
+    "Garlic",
+    "Mushrooms",
+    "Tomatoes",
+    "Chillies Peppers",
+    "Broccoli",
+    "Watermelons",
+    "Oranges",
+    "Bananas",
+    "Grapes",
+    "Cherries",
+    "Meat",
+    "Seo tag",
+    "Fish",
+    "Seo tag",
+    "Fresh food",
+    "Lemons",
+  ],
 };
 
 export default data;
