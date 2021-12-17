@@ -1,5 +1,8 @@
 @import '../../../assets/css/style.scss';
 
+.blog__post {
+    padding: var(--pd-section);
+}
 .blog_list {
     display: grid;
     grid-template-columns: 1fr 270px 1fr;
