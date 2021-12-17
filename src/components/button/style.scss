@@ -15,7 +15,6 @@
     border-radius: var(--radius);
     @include text(var( --body12-fs), pb,none, var(--color), none);
     &.size {
-        &-small{}
         &-medium{
             --height: 48px;
             --pd: 16px;
@@ -49,7 +48,6 @@
     }
 
     &.type {
-        &-default{}
         &-icon-left{
             @include flex(center, center);
             gap: 12px;

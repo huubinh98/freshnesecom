@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.scss";
-import Tags from "./Tags";
+import Tags from "../Tags";
 
 export default function Footer() {
   // nên khai báo là const vì nó là hằng. không thay đổi được. Nó là dữ liệu cứng mà.
@@ -17,7 +17,7 @@ export default function Footer() {
   // Tập sử dụng map nhiêu ở những trượng hợp này nha.
 
   return (
-    <footer className="footer container-fluid">
+    <footer className="footer container">
       <div className="footer_list">
         <div className="footer_list-item">
           <h3>Get In Touch</h3>

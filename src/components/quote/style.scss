@@ -1,0 +1,66 @@
+@import '../../assets/css/style.scss';
+
+.quoteItem {
+    position: relative;
+    border: 1px solid #f1f1f1;
+    border-radius: 12px;
+    padding: 24px 32px;
+    margin: 0 16px 35px 16px;
+    cursor: pointer;
+    @include transition($t);
+
+    .quoteContent {
+        max-width: 305px;
+        width: 305px;
+        text-align: center;
+
+        h4 {
+            @include text(var(--h4-fs), p, var(--h4-lh), $black15, none);
+            margin-bottom: 24px;
+            @include transition($t);
+        }
+
+        p {
+            @include text(var(--body12-fs), p, var(--body12-lh), $gray-cl, none);
+            padding-bottom: 15px;
+            @include transition($t);
+        }
+    }
+
+    .quoteImg {
+        position: relative;
+        @include size(46px);
+        border-radius: 50%;
+        overflow: hidden;
+        position: absolute;
+        bottom: -12%;
+        left: 50%;
+        @include transform(translateX(-50%));
+
+        img {
+            @include midimg(100%);
+            filter: grayscale(80%);
+            @include transition($t);
+        }
+    }
+
+    &:hover {
+        background-color: $green-cl;
+
+        .quoteContent {
+            h4 {
+                color: $white-cl;
+            }
+
+            p {
+                color: $white-cl;
+            }
+        }
+
+        .quoteImg {
+            img {
+                filter: grayscale(0%);
+            }
+        }
+    }
+}
