@@ -3,25 +3,32 @@ import Banner from "./Banner/Banner";
 import BestProduct from "./BestProduct/BestProduct";
 import BlogPost from "./BlogPost/BlogPost";
 import CategoryMenu from "./CategoryMenu/CategoryMenu";
+import CustomerQuote from "./CustomerQuote/CustomerQuote";
 import "./style.scss";
 
 export default function HomePage() {
   return (
     <main className="home__wrapper">
-      <div className="container-fluid">
-        <section className="category__banner">
+      <section className="category__banner">
+        <div className="container">
           <CategoryMenu />
           <Banner />
-        </section>
-        <section className="category__product">
+        </div>
+      </section>
+      <section className="category__product">
+        <div className="container">
           <CategoryMenu />
           <BestProduct />
-        </section>
-        <section className="category__product">
+        </div>
+      </section>
+      <section className="category__product">
+        <div className="container">
           <CategoryMenu />
           <BestProduct />
-        </section>
-      </div>
+        </div>
+      </section>
+      <CustomerQuote />
+      <BlogPost />
     </main>
   );
 }
