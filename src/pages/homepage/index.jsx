@@ -1,6 +1,7 @@
 import React from "react";
 import Banner from "./Banner/Banner";
 import BestProduct from "./BestProduct/BestProduct";
+import BlogPost from "./BlogPost/BlogPost";
 import CategoryMenu from "./CategoryMenu/CategoryMenu";
 import "./style.scss";
 

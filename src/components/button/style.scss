@@ -19,7 +19,6 @@
     }
     
     &.size {
-        &-small{}
         &-medium{
             --height: 48px;
             --pd: 16px;
@@ -53,7 +52,6 @@
     }
 
     &.type {
-        &-default{}
         &-icon-left{
             @include flex(center, center);
             gap: 12px;
