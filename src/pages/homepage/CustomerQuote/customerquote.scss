@@ -1,0 +1,47 @@
+@import '../../../assets/css/style.scss';
+
+.customerquote {
+    padding: 65px 0;
+
+    .container-fluid {
+        .section-headline {
+            margin-bottom: 42px;
+            @include flex(center, space-between);
+
+            h3 {
+                @include text(var(--h3-fs), psb, var(--h3-lh), $black15, none)
+            }
+        }
+    }
+
+    .quote_list {
+        @include flex(center, center);
+        overflow: hidden;
+        position: relative;
+
+        .btn-quote {
+            cursor: pointer;
+            position: absolute;
+            padding: 15px 7px;
+            background-color: $black15;
+
+            img {
+                height: 24px;
+            }
+
+            &.prev {
+                left: 0;
+                border-radius: 0 12px 12px 0;
+
+                img {
+                    @include transform(rotate(180deg));
+                }
+            }
+
+            &.next {
+                border-radius: 12px 0 0 12px;
+                right: 0;
+            }
+        }
+    }
+}
