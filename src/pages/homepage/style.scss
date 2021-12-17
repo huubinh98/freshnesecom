@@ -1,0 +1,27 @@
+@import "../../assets/css/style.scss";
+
+.home__wrapper {
+    .category__banner {
+        @include flex(center, flex-start);
+        padding: var(--pd-section);
+        gap: 32px;
+        .cate {
+            width: 270px;
+        }
+        .banner {
+            flex: 1;
+        }
+    }
+
+    .category__product {
+        @include flex(center, flex-start);
+        padding: var(--pd-section);
+        gap: 32px;
+        .cate {
+            width: 270px;
+        }
+        .banner {
+            flex: 1;
+        }
+    }
+}

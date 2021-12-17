@@ -1,0 +1,21 @@
+@import "../../../assets/css/style.scss";
+
+.cate {
+    max-width: 270px;
+    width: 100%;
+    .heading {
+        @include text(var(--h3-fs), pb, var(--h3-lh), $black15, none);
+        margin-bottom: 13px;
+    }
+    &__list {
+        margin-bottom: 48px;
+        @include flex(flex-start, flex-start);
+        flex-direction: column;
+        gap: 12px;
+        &-item {
+            a {
+                @include text(var(--body14-fs), os, var(--body12-lh), $green-cl, none);
+            }
+        }
+    }
+}

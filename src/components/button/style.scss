@@ -2,7 +2,6 @@
 
 .Button {
     --height:36px;
-    --radius: 12px;
     --bg-color: #{$green-cl};
     --color: #{$white-cl};
     --border: #{$green-border};
@@ -13,7 +12,12 @@
     cursor: pointer;
     padding: 0 var(--pd);
     border-radius: var(--radius);
-    @include text(var( --body12-fs), pb,none, var(--color), none);
+    @include text(var( --h4-fs), pb,none, var(--color), none);
+
+    svg {
+        display: block;
+    }
+    
     &.size {
         &-medium{
             --height: 48px;
@@ -37,7 +41,7 @@
             --color: #{$black15};
         }
         &-stroke{
-            --bg-color: #{$white-cl};
+            --bg-color: transparent;
             --border :#92C064;
             --color: #{$black15};
         }
@@ -61,7 +65,7 @@
         }
     }
 
-    &.round {
-        border-radius: 50px;
-    }
+    // &.round {
+    //     border-radius: 50px;
+    // }
 }

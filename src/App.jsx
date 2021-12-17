@@ -3,7 +3,7 @@ import HomePage from "./pages/Homepage";
 import MainLayout from "./layout/MainLayout";
 import "./assets/css/style.scss";
 import NotFound from "./pages/NotFound";
-
+import ProductItem from "./components/ProductItem";
 function App() {
   return (
     <>

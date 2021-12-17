@@ -5,15 +5,15 @@ export function IconArowBtn() {
   return (
     <i>
       <svg
-        width="6"
-        height="10"
-        viewBox="0 0 6 10"
+        width={16}
+        height={16}
+        viewBox="0 0 16 16"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          d="M1.5332 8.18661L4.2732 5.44661C4.39737 5.3217 4.46706 5.15274 4.46706 4.97661C4.46706 4.80049 4.39737 4.63152 4.2732 4.50661L1.60654 1.83995"
-          stroke="white"
+          d="M6.5332 11.1867L9.2732 8.44667C9.39737 8.32176 9.46707 8.15279 9.46707 7.97667C9.46707 7.80055 9.39737 7.63158 9.2732 7.50667L6.60654 4.84"
+          stroke="#6A983C"
           strokeWidth="2.5"
           strokeLinecap="round"
           strokeLinejoin="bevel"

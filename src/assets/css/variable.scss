@@ -30,6 +30,8 @@ $orange-cl: #E6704B;
 $yellow-cl: #FDBC15;
 $d1: #d1d1d1;
 
+$desc-cl: #575757;
+
 
 
 // timing transition - tuỳ chỉnh
@@ -62,9 +64,13 @@ $t: 0.4s;
 
     --pd-section: 64px 0;
 
+    --radius: 12px;
+
     // Genaral Variable
 
     --gap: 45px; // gap này sử dụng cho gap cột & padding của container, container-fluid
+
+    --gap-grid: 32px;
 
     @media (max-width: $sm-max) {
         // Tablet

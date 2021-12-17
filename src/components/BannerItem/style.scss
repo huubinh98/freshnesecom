@@ -1,0 +1,28 @@
+@import "../../assets/css/style.scss";
+
+.banner__img {
+    img {
+        @include size(100%);
+        object-fit: cover;
+    }
+}
+.banner__item {
+    @include size(420px, 280px);
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    &-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding:48px 32px 32px 32px;
+        .titl {
+            @include text(var(--body12-fs), pb, 2rem, $green-cl, none);
+            margin-bottom: 8px;
+        }
+        .heading {
+            @include text(var(--h2-fs), pb, var(--h2-lh), $black15, none);
+            margin-bottom: 87px;
+        }
+    }
+}
