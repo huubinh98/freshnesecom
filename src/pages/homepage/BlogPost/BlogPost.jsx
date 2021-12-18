@@ -1,11 +1,21 @@
 import React from "react";
 import { BlogItem } from "../../../components/Blog";
 import "./blogpost.scss";
+import Button from "../../../components/Button";
+
 
 export default function BlogPost() {
   return (
     <div className="blog__post">
       <div className="container">
+        <div className="section_headline">
+          <h3>Our customers says</h3>
+
+          <Button color="white" size="small" type="icon-right">
+            Button
+          </Button>
+        </div>
+
         <div className="blog_list">
           <div className="left">
             <BlogItem
