@@ -6,38 +6,54 @@
     overflow: hidden;
     border: 1px solid $d1;
     border-radius: var(--radius);
+
     &-img {
         overflow: hidden;
         height: 0;
         padding-bottom: 76.3%;
         border-radius: var(--radius);
         position: relative;
+
         img {
             @include midimg(100%);
+            @include transition($t);
         }
     }
 
     &-content {
         margin-top: 16px;
+
         .title {
             @include text(var(--h4-fs), p, var(--h4-lh), $black15, none);
             margin-bottom: 4px;
         }
+
         .desc {
             @include text(var(--body12-fs), os, var(--body12-lh), $desc-cl, none);
             margin-bottom: 16px;
         }
+
         .content-button {
             @include flex(center, space-between);
+
             .price {
                 &__discount {
                     @include text(var(--h3-fs), pb, var(--h3-lh), $black15, none);
                 }
+
                 &__main {
                     color: $gray-cl;
                     font-family: pb;
                     text-decoration: line-through;
                 }
+            }
+        }
+    }
+
+    &:hover {
+        .pro__item-img {
+            img {
+                @include transform(scale(1.1) translate(-50%, -50%));
             }
         }
     }
