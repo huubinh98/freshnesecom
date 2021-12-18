@@ -11,10 +11,27 @@
         overflow: hidden;
         margin-bottom: 24px;
         border-radius: 12px;
+        cursor: pointer;
 
         img {
             @include midimg(100%);
             @include transition($t);
+        }
+    }
+
+    .blogTag {
+        @include text(var(--body12-fs), pb, var(--body12-lh), $green-cl, none);
+        padding: 2px 8px;
+        border-radius: 12px;
+        background-color: $green-f4;
+        display: inline-block;
+        margin-bottom: 8px;
+        cursor: pointer;
+        @include transition($t);
+
+        &:hover {
+            background-color: $green-cl;
+            color: $white-cl
         }
     }
 
@@ -78,7 +95,7 @@
                 }
             }
 
-            .tag-item {
+            .blogTag {
                 position: absolute;
                 top: 5%;
                 left: 5%;
@@ -115,7 +132,7 @@
                 min-height: 96px;
             }
 
-            .tag-item {
+            .blogTag {
                 display: none;
             }
 

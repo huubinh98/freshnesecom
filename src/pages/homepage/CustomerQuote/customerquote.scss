@@ -15,23 +15,29 @@
     }
 
     .quote_list {
-        @include flex(center, center);
-        overflow: hidden;
+        // @include flex(center, center);
+        // overflow: hidden;
         position: relative;
+
+        .carousel {
+            outline: none;
+        }
 
         .btn-quote {
             cursor: pointer;
             position: absolute;
             padding: 15px 7px;
             background-color: $black15;
+            bottom: 30%;
+            @include transform(translateY(-30%));
 
             img {
                 height: 24px;
             }
 
             &.prev {
-                left: 0;
                 border-radius: 0 12px 12px 0;
+                left: 0;
 
                 img {
                     @include transform(rotate(180deg));

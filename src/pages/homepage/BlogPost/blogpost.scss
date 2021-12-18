@@ -2,9 +2,19 @@
 
 .blog__post {
     padding: var(--pd-section);
-}
-.blog_list {
-    display: grid;
-    grid-template-columns: 1fr 270px 1fr;
-    gap: 32px;
+
+    .section_headline {
+        margin-bottom: 38px;
+        @include flex(center, space-between);
+
+        h3 {
+            @include text(var(--h3-fs), psb, var(--h3-lh), $black15, none)
+        }
+    }
+
+    .blog_list {
+        display: grid;
+        grid-template-columns: 1fr 270px 1fr;
+        gap: 32px;
+    }
 }
