@@ -15,10 +15,6 @@ export default function CustomerQuote() {
     prevNextButtons: false
   }
 
-  // const myCustomNext = () => {
-  //   this.flkty.next()
-  // }
-
   return (
     <div className="customerquote">
       <div className="container">

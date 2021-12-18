@@ -14,7 +14,7 @@ export default function index({ data }) {
               <img src={item.image} alt="" />
             </div>
             <div className="banner__item-content">
-              <p className="titl">{item.title}</p>
+              <p className="title">{item.title}</p>
               <h2 className="heading">{item.name}</h2>
               <Button
                 color="bright"
