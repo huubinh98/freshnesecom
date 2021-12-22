@@ -2,18 +2,20 @@ import React from "react";
 import "./customerquote.scss";
 import Button from "../../../components/Button";
 import { QuoteItem } from "../../../components/Quote";
-import arrowButton from "../../../assets/img/arrowButton.svg";
+// import arrowButton from "../../../assets/img/arrowButton.svg";
+import { IconArowBtn } from "../../../components/Icon";
+
 import Flickity from 'react-flickity-component';
 
 export default function CustomerQuote() {
 
   const flickityOptions = {
     initialIndex: 2,
-    dots: false,
+    pageDots: false,
     groupsCells: 2,
     wrapAround: true,
-    prevNextButtons: false
   }
+
 
   return (
     <div className="customerquote">
@@ -21,7 +23,7 @@ export default function CustomerQuote() {
         <div className="section-headline">
           <h3>Our customers says</h3>
 
-          <Button color="white" size="small" type="icon-right">
+          <Button color="simple" size="small" type="icon-right" icon={<IconArowBtn />} >
             Button
           </Button>
         </div>
@@ -62,12 +64,12 @@ export default function CustomerQuote() {
           />
         </Flickity>
 
-        <div className="btn-quote prev">
+        {/* <div className="btn-quote prev" onClick={customPrev}>
           <img src={arrowButton} alt="" />
         </div>
-        <div className="btn-quote next">
+        <div className="btn-quote next" onClick={customNext}>
           <img src={arrowButton} alt="" />
-        </div>
+        </div> */}
       </div>
     </div>
   );
