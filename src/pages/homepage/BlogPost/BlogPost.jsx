@@ -2,6 +2,7 @@ import React from "react";
 import { BlogItem } from "../../../components/Blog";
 import "./blogpost.scss";
 import Button from "../../../components/Button";
+import { IconArowBtn } from "../../../components/Icon";
 
 
 export default function BlogPost() {
@@ -11,7 +12,7 @@ export default function BlogPost() {
         <div className="section_headline">
           <h3>Our customers says</h3>
 
-          <Button color="white" size="small" type="icon-right">
+          <Button color="simple" size="small" type="icon-right" icon={<IconArowBtn />} >
             Button
           </Button>
         </div>

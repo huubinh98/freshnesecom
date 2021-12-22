@@ -13,7 +13,6 @@ export function IconArowBtn() {
       >
         <path
           d="M6.5332 11.1867L9.2732 8.44667C9.39737 8.32176 9.46707 8.15279 9.46707 7.97667C9.46707 7.80055 9.39737 7.63158 9.2732 7.50667L6.60654 4.84"
-          stroke="#6A983C"
           strokeWidth="2.5"
           strokeLinecap="round"
           strokeLinejoin="bevel"
