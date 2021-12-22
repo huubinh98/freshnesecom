@@ -1,0 +1,114 @@
+@import '../../assets/css/style.scss';
+
+.login-page {
+    display: flex;
+
+    .left {
+        max-width: 50%;
+        height: 100vh;
+
+        img {
+            @include size(100%);
+            object-fit: cover;
+            filter: grayscale(35%);
+            @include transition($t);
+        }
+
+        &:hover {
+            img {
+                filter: grayscale(20%);
+            }
+        }
+    }
+
+    .right {
+        @include flex(center, center);
+        width: 100%;
+
+        .login-form {
+            width: 100%;
+            max-width: 350px;
+            height: 550px;
+            background: rgb(70, 118, 10);
+            background: linear-gradient(0deg, rgba(70, 118, 10, 1) 0%, rgba(106, 152, 60, 1) 25%, rgba(106, 152, 60, 1) 75%, rgba(70, 118, 10, 1) 100%);
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0px 10px 15px 0px #000;
+
+            #chk {
+                display: none;
+
+                &:checked~.login {
+                    transform: translateY(-250px);
+
+                    label {
+                        transform: scale(1);
+                        color: $green-cl;
+                    }
+                }
+
+                &:checked~.register {
+                    label {
+                        transform: scale(.6);
+                    }
+                }
+            }
+
+            label {
+                color: $white-cl;
+                font-size: 2.3em;
+                justify-content: center;
+                display: flex;
+                margin: 60px;
+                font-weight: bold;
+                cursor: pointer;
+                transition: .5s ease-in-out;
+            }
+
+            input {
+                width: 60%;
+                height: 20px;
+                background: #e0dede;
+                justify-content: center;
+                display: flex;
+                margin: 20px auto;
+                padding: 20px;
+                border: none;
+                outline: none;
+                border-radius: 5px;
+            }
+
+            button {
+                width: 60%;
+                height: 40px;
+                margin: 10px auto;
+                justify-content: center;
+                display: block;
+                color: #fff;
+                background: $green-border;
+                font-size: 1em;
+                font-weight: bold;
+                margin-top: 20px;
+                outline: none;
+                border: none;
+                border-radius: 5px;
+                transition: .2s ease-in;
+                cursor: pointer;
+            }
+
+            p {
+                font-size: 1rem;
+                color: red;
+                letter-spacing: .1rem;
+                margin: 0 auto;
+                width: 60%;
+            }
+
+            button:hover {
+                background: $green-cl;
+            }
+        }
+
+
+    }
+}
