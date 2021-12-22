@@ -5,6 +5,7 @@ import Search from "./Search";
 import Cart from "./Cart";
 import Account from "./Account";
 import { Logo } from "../Icon";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   let contact = {
@@ -17,7 +18,7 @@ export default function Header() {
   const contactItem = contactList.map(function (item, index) {
     return (
       <li className="header__contact-item" key={index}>
-        <a href="#">{item}</a>
+        <Link to="">{item}</Link>
       </li>
     );
   });
