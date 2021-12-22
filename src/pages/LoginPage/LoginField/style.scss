@@ -1,0 +1,17 @@
+@import '../../../assets/css/style.scss';
+
+.login {
+    height: 460px;
+    background: #eee;
+    border-radius: 60% / 10%;
+    transform: translateY(35px);
+    transition: .8s ease-in-out;
+    padding: 5px;
+
+    form {
+        label {
+            color: $green-cl !important;
+            transform: scale(.6);
+        }
+    }
+}

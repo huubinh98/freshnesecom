@@ -1,12 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { IconCart } from "../Icon";
 
 export default function Cart() {
   return (
     <div>
-      <a href="">
+      <Link to='/checkout'>
         <IconCart />
-      </a>
+      </Link>
     </div>
   );
 }
