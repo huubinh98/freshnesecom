@@ -8,6 +8,8 @@ import NotFound from "./pages/NotFound";
 import Input from "./components/Input";
 import { IconAccount } from "./components/Icon";
 import AuthProvider from "./context/AuthContext";
+import CheckoutPage from "./pages/Checkoutpage";
+import LoginPage from "./pages/LoginPage";
 
 function App() {
   return (
@@ -15,7 +17,9 @@ function App() {
       <Routes>
         <Route path="/" element={<MainLayout />}>
           <Route path="/" element={<HomePage />} />
+          <Route path="/checkout" element={<CheckoutPage />} />
         </Route>
+        <Route path="*" element={<LoginPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
 
