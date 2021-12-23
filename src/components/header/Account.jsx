@@ -5,11 +5,7 @@ import { IconAccount } from "../Icon";
 export default function Account() {
   return (
     <div>
-<<<<<<< HEAD
-      <Link to="">
-=======
       <Link to="/LoginPage" >
->>>>>>> master
         <IconAccount />
       </Link>
     </div>
