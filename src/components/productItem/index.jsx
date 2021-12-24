@@ -4,7 +4,7 @@ import data from "../../mocks";
 
 import "./style.scss";
 
-export default function ProductItem({}) {
+export default function ProductItem() {
   const { productCart } = data;
   return (
     <>

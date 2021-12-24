@@ -7,10 +7,10 @@ import "./assets/css/style.scss";
 import NotFound from "./pages/NotFound";
 import Input from "./components/Input";
 import { IconAccount } from "./components/Icon";
-import AuthProvider from "./context/AuthContext";
 import CheckoutPage from "./pages/Checkoutpage";
 import LoginPage from "./pages/LoginPage";
 import BlogPage from "./pages/BlogPage";
+import { AuthProvider } from "./context/AuthContext";
 
 function App() {
   return (
@@ -25,14 +25,14 @@ function App() {
         <Route path="*" element={<NotFound />} />
       </Routes>
 
-      <Input
+      {/* <Input
         icon={<IconAccount />}
         pos="icon-right"
         label="đăng nhập"
         type="checkbox"
         placeholder="nhập tên"
         // bool
-      />
+      /> */}
     </AuthProvider>
   );
 }
