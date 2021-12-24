@@ -1,0 +1,18 @@
+@import '../../assets/css/style.scss';
+
+.input {
+    label {
+        @include text(var(--body12-fs), pb, var(--body12-lh), $black15, none);
+        display: block;
+    }
+
+    input {
+        padding: 10px 20px;
+        width: 320px;
+        border: 1px solid $d1;
+        border-radius: 12px;
+        outline: none;
+        @include text(var(--body14-fs), os, var(--body14-lh), $black15, none);
+
+    }
+}

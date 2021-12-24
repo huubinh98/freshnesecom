@@ -26,10 +26,10 @@ function App() {
       {/* <Input
         icon={<IconAccount />}
         pos="icon-right"
-        label="đăng nhập"
-        type="checkbox"
-        placeholder="nhập tên"
-        // bool
+        label="Text Label"
+        type="text"
+        placeholder="Text field"
+      // bool
       /> */}
     </AuthProvider>
   );

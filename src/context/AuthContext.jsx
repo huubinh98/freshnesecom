@@ -8,8 +8,16 @@ export const AuthProvider = ({ children }) => {
 
   const [login, setLogin] = useState(false);
 
+  const submitLogin = () => {
+    setLogin(true);
+  }
+  const submitLogout = () => {
+    setLogin(false);
+  }
+
+
   return (
-    <AuthContext.Provider>
+    <AuthContext.Provider value={{ login, submitLogin, submitLogout }}>
       {children}
     </AuthContext.Provider>
   )
