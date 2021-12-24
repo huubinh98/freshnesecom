@@ -1,11 +1,8 @@
 const { createContext, useState } = require("react");
 
-const AuthContext = createContext()
-
-
+export const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
-
   const [login, setLogin] = useState(false);
 
   const submitLogin = () => {
@@ -15,10 +12,9 @@ export const AuthProvider = ({ children }) => {
     setLogin(false);
   }
 
-
   return (
     <AuthContext.Provider value={{ login, submitLogin, submitLogout }}>
       {children}
     </AuthContext.Provider>
-  )
-}
+  );
+};
