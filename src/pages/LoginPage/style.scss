@@ -4,7 +4,7 @@
     display: flex;
 
     .left {
-        max-width: 50%;
+        width: 40%;
         height: 100vh;
 
         img {
@@ -23,7 +23,7 @@
 
     .right {
         @include flex(center, center);
-        width: 100%;
+        width: 60%;
 
         .login-form {
             width: 100%;

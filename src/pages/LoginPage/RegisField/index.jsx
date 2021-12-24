@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 const emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-const passwordRegex = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/
+// const passwordRegex = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/
 
 const Register = () => {
 
@@ -33,11 +33,11 @@ const Register = () => {
         }
         if (!formRegis.password) {
             errObj.password = '*Please enter password'
-        } else if (!passwordRegex.test(formRegis.password)) {
+        } else if (formRegis.password.length < 8 || formRegis.password.length > 32) {
             errObj.password = '*Password must contain 8 - 32 characters'
         }
         setErr(errObj);
-        console.log(formRegis)
+        console.log(formRegis.password.length)
     }
 
     return (
