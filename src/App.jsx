@@ -9,6 +9,7 @@ import Input from "./components/Input";
 import { IconAccount } from "./components/Icon";
 import CheckoutPage from "./pages/Checkoutpage";
 import LoginPage from "./pages/LoginPage";
+import BlogPage from "./pages/BlogPage";
 import { AuthProvider } from "./context/AuthContext";
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path="/" element={<MainLayout />}>
           <Route path="/" element={<HomePage />} />
           <Route path="/checkout" element={<CheckoutPage />} />
+          <Route path="/blogpage" element={<BlogPage />} />
         </Route>
         <Route path="*" element={<LoginPage />} />
         <Route path="*" element={<NotFound />} />

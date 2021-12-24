@@ -13,19 +13,10 @@ export default function Header() {
     phone: "+420 336 775 664",
     email: "info@freshnesecom.com",
   };
-
-  let contactList = ["Blog", "About us", "Carrers"];
-  const contactItem = contactList.map(function (item, index) {
-    return (
-      <li className="header__contact-item" key={index}>
-        <Link to="">{item}</Link>
-      </li>
-    );
-  });
   return (
     <header className="header">
       <div className="container">
-        <HeaderContact props={contact} item={contactItem} />
+        <HeaderContact props={contact} />
         <div className="header__search">
           <div className="logo">
             <h1>ReactShop</h1>

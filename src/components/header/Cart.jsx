@@ -5,7 +5,7 @@ import { IconCart } from "../Icon";
 export default function Cart() {
   return (
     <div>
-      <Link to='/checkout'>
+      <Link to="/checkout">
         <IconCart />
       </Link>
     </div>
