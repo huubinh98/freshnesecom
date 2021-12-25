@@ -1,6 +1,8 @@
 import React from "react";
 import "./style.scss";
 import Tags from "../Tags";
+import Checkbox from "../Checkbox";
+// import { IconClose } from '../Icon'
 
 export default function Footer() {
   // Tập sử dụng map nhiêu ở những trượng hợp này nha.
@@ -53,7 +55,7 @@ export default function Footer() {
       <div className="product-tags">
         <h3>Product tags</h3>
         <div className="tag_list">
-          <Tags />
+          <Tags></Tags>
         </div>
       </div>
 
