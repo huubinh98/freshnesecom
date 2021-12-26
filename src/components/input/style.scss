@@ -1,10 +1,7 @@
 @import '../../assets/css/style.scss';
-
-form {
-    margin-bottom: 40px !important;
-}
 .label {
-    @include text(var(--body12-fs), pb, var(--body12-lh), $black15, none)
+    @include text(var(--body12-fs), pb, var(--body12-lh), $black15, none);
+    margin-bottom: 6px;
 }
 .input {
     background-color: $bg-nav;
@@ -35,6 +32,9 @@ form {
         height: 100%;
         width: 100%;
         text-align: left;
+        &::placeholder {
+            color: $gray-cl;
+        }
     }
 
     .size {
