@@ -1,12 +1,8 @@
-import React from 'react'
-import './style.scss'
+import React from "react";
+import "./style.scss";
 
 const CheckoutPage = () => {
-    return (
-        <div>
-            <h1>Check Out Page</h1>
-        </div>
-    )
-}
+  return <div>xin chào</div>;
+};
 
-export default CheckoutPage
+export default CheckoutPage;

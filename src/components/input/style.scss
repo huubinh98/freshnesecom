@@ -1,18 +1,44 @@
 @import '../../assets/css/style.scss';
 
+form {
+    margin-bottom: 40px !important;
+}
+.label {
+    @include text(var(--body12-fs), pb, var(--body12-lh), $black15, none)
+}
 .input {
-    label {
-        @include text(var(--body12-fs), pb, var(--body12-lh), $black15, none);
-        display: block;
+    background-color: $bg-nav;
+    max-width: 320px;
+    border: 1px solid $d1;
+    border-radius: var(--radius);
+    height: 42px;
+    overflow: hidden;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    .pos {
+        &-icon-left {
+            i {
+                display: flex;
+                margin-left: 12px;
+            }
+            svg {
+                display: block;
+            }
+        }
+    }
+    input {
+        @include text(var(--body14-fs), p, var(--body14-lh), $black15, none);
+        border: none;
+        outline: none;
+        height: 100%;
+        width: 100%;
+        text-align: left;
     }
 
-    input {
-        padding: 10px 20px;
-        width: 320px;
-        border: 1px solid $d1;
-        border-radius: 12px;
-        outline: none;
-        @include text(var(--body14-fs), os, var(--body14-lh), $black15, none);
+    .size {
 
     }
 }
+
