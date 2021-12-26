@@ -1,0 +1,34 @@
+@import '../../assets/css/style.scss';
+
+.radioComponent {
+    @include size(100%, 48px);
+    background: $bg-nav;
+    border: 1px solid $d1;
+    border-radius: 12px;
+    @include flex(center, space-between);
+    padding: 0 18px;
+
+    .left {
+        @include flex(center, space-between);
+        width: 55%;
+
+        label {
+            @include text(var(--body12-fs), psb, var(--body12-lh), $black15, none);
+            margin-left: 18px;
+        }
+
+        .price-method {
+            @include flex(center, center);
+
+            p {
+                @include text(var(--body12-fs), psb, var(--body12-lh), $black15, none);
+            }
+
+            p:first-child {
+                color: $green-cl;
+                margin-right: 12px;
+            }
+        }
+    }
+
+}

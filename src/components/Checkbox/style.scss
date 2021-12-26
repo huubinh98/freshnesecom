@@ -3,6 +3,7 @@
 .squaredcheck {
     position: relative;
     margin: 20px auto;
+    @include flex(center, center);
 
     label {
         width: 20px;
@@ -50,6 +51,15 @@
 
         &:checked+label:after {
             opacity: 1;
+        }
+    }
+
+    &.type {
+        &-round {
+            padding: 11px 18px;
+            background: $bg-nav;
+            border: 1px solid $d1;
+            border-radius: 12px;
         }
     }
 }
