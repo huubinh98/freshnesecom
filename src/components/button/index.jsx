@@ -25,4 +25,4 @@ export default function Button({
       {type === "icon-right" && icon}
     </button>
   );
-}
+} 

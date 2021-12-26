@@ -1,11 +1,13 @@
 @import '../../assets/css/style.scss';
 
 .tag-item {
-    @include text(1.2rem, pb, 2rem, $black15, none);
+    --color: #{$black15};
+    --bg: #{$white-f5};
+    @include text(1.2rem, pb, 2rem, var(--color), none);
     cursor: pointer;
     padding: 4px 10px;
     border-radius: 12px;
-    background-color: $white-f5;
+    background-color: var(--bg);
     margin-right: 16px;
     margin-bottom: 16px;
     display: inline-block;
@@ -14,5 +16,39 @@
     &:hover {
         color: $white-f5;
         background-color: $green-cl;
+    }
+
+    &.size {
+        &-small {
+            padding: 0px 8px;
+        }
+    }
+
+    &.color {
+        &-green {
+            --color: #{$green-cl};
+
+            svg {
+                stroke: #C8DEB3;
+            }
+        }
+    }
+
+    &.type {
+        &-simple {
+            --bg: transparent;
+        }
+    }
+
+    &.icon {
+        @include flex(center, center);
+
+        svg {
+            margin-left: 12px;
+            @include size(6px);
+            stroke: #141414;
+
+        }
+
     }
 }

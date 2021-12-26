@@ -220,6 +220,13 @@
 	height: $h;
 }
 
+@mixin userselect($type) {
+	-webkit-user-select: $type;
+    -moz-user-select: $type;
+    -ms-user-select: $type;
+    user-select: $type;
+}
+
 @mixin customscroll($width: 5px, $bgTrack: #000, $bgThumb: #ddd) {
 	&::-webkit-scrollbar {
 		width: $width;
