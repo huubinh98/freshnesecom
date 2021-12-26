@@ -1,11 +1,16 @@
 import React from "react";
 import "./style.scss";
 import Tags from "../Tags";
-import Checkbox from "../Checkbox";
-// import { IconClose } from '../Icon'
+import data from "../../mocks";
 
 export default function Footer() {
   // Tập sử dụng map nhiêu ở những trượng hợp này nha.
+
+  const { tagList } = data;
+  const item = tagList.map((item) => {
+    console.log(item);
+    return item;
+  });
 
   return (
     <footer className="footer container">
@@ -55,7 +60,7 @@ export default function Footer() {
       <div className="product-tags">
         <h3>Product tags</h3>
         <div className="tag_list">
-          <Tags></Tags>
+          <Tags>{item}</Tags>
         </div>
       </div>
 

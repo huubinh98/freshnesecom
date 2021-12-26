@@ -1,22 +1,24 @@
 import classNames from "classnames";
 import React from "react";
-import './style.scss'
+import "./style.scss";
 
 export default function Input({
   label,
   icon,
   size = "default",
-  pos = "default",
+  position = "default",
   ...inputProps
 }) {
   return (
     <form action="">
-      <div className={classNames(`input size-${size} pos-${pos}`)}>
-        <label htmlFor="">{label}</label>
-        {pos === "icon-left" && icon}
-        <input {...inputProps} />
-        {pos === "icon-right" && icon}
-      </div>
+      <label>
+        <p className="label">{label}</p>
+        <div className={classNames(`input size-${size} pos-${position}`)}>
+          {position === "icon-left" && icon}
+          <input {...inputProps} />
+          {position === "icon-right" && icon}
+        </div>
+      </label>
     </form>
   );
 }
