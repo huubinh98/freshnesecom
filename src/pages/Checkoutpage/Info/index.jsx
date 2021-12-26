@@ -7,7 +7,12 @@ export default function Info() {
   return (
     <div className="checkout__info">
       <h2 className="heading">Billing info</h2>
-      <p className="desc">Please enter your billing info</p>
+
+      <div className="checkout-step">
+        <p className="desc">Please enter your billing info</p>
+        <p className="desc">Step 1 of 5</p>
+      </div>
+
       <form>
         <Input label="First name" placeholder="First name" />
         <Input label="Last name" placeholder="Last name" />
