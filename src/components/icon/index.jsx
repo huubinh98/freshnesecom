@@ -226,46 +226,215 @@ export function IconDropdown() {
 export function IconClose() {
   return (
     <i>
-      <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M30.5997 30.5999L9.39966 9.3999" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="bevel" />
-        <path d="M30.5997 9.3999L9.39966 30.5999" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="bevel" />
+      <svg
+        width={13}
+        height={12}
+        viewBox="0 0 13 12"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M9.68031 9.18003L3.32031 2.82003"
+          stroke="#151515"
+          strokeLinecap="round"
+          strokeLinejoin="bevel"
+        />
+        <path
+          d="M9.68031 2.82003L3.32031 9.18003"
+          stroke="#151515"
+          strokeLinecap="round"
+          strokeLinejoin="bevel"
+        />
       </svg>
     </i>
-  )
+  );
 }
 
 export function IconSwitch() {
   return (
     <i>
       <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M27.9665 14.5002L21.1165 7.65018C20.8042 7.33976 20.3818 7.16553 19.9415 7.16553C19.5012 7.16553 19.0788 7.33976 18.7665 7.65018L12.0999 14.3168" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="bevel" />
-        <path d="M12.0332 25.5L18.8832 32.35C19.1955 32.6604 19.6179 32.8347 20.0582 32.8347C20.4985 32.8347 20.9209 32.6604 21.2332 32.35L27.8999 25.6833" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="bevel" />
+        <path
+          d="M27.9665 14.5002L21.1165 7.65018C20.8042 7.33976 20.3818 7.16553 19.9415 7.16553C19.5012 7.16553 19.0788 7.33976 18.7665 7.65018L12.0999 14.3168"
+          stroke-width="2.5"
+          stroke-linecap="round"
+          stroke-linejoin="bevel"
+        />
+        <path
+          d="M12.0332 25.5L18.8832 32.35C19.1955 32.6604 19.6179 32.8347 20.0582 32.8347C20.4985 32.8347 20.9209 32.6604 21.2332 32.35L27.8999 25.6833"
+          stroke-width="2.5"
+          stroke-linecap="round"
+          stroke-linejoin="bevel"
+        />
       </svg>
-
     </i>
-  )
+  );
 }
 
 export function IconGrid() {
   return (
     <i>
-      <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M33.3333 3.3335H6.66659C4.82564 3.3335 3.33325 4.82588 3.33325 6.66683V33.3335C3.33325 35.1744 4.82564 36.6668 6.66659 36.6668H33.3333C35.1742 36.6668 36.6666 35.1744 36.6666 33.3335V6.66683C36.6666 4.82588 35.1742 3.3335 33.3333 3.3335Z" stroke="#151515" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-        <path d="M3.33325 20H36.6666" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-        <path d="M20 3.3335V36.6668" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+      <svg
+        width="40"
+        height="40"
+        viewBox="0 0 40 40"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M33.3333 3.3335H6.66659C4.82564 3.3335 3.33325 4.82588 3.33325 6.66683V33.3335C3.33325 35.1744 4.82564 36.6668 6.66659 36.6668H33.3333C35.1742 36.6668 36.6666 35.1744 36.6666 33.3335V6.66683C36.6666 4.82588 35.1742 3.3335 33.3333 3.3335Z"
+          stroke="#151515"
+          stroke-width="2.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M3.33325 20H36.6666"
+          stroke-width="2.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M20 3.3335V36.6668"
+          stroke-width="2.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
       </svg>
     </i>
-  )
+  );
 }
 export function IconList() {
   return (
     <i>
-      <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M33.3333 3.3335H6.66659C4.82564 3.3335 3.33325 4.82588 3.33325 6.66683V33.3335C3.33325 35.1744 4.82564 36.6668 6.66659 36.6668H33.3333C35.1742 36.6668 36.6666 35.1744 36.6666 33.3335V6.66683C36.6666 4.82588 35.1742 3.3335 33.3333 3.3335Z" stroke="#151515" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-        <path d="M3.33325 11.667H36.6666" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-        <path d="M3.33325 20H36.6666" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-        <path d="M3.33325 28.3335H36.6666" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+      <svg
+        width={40}
+        height={40}
+        viewBox="0 0 40 40"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M33.3333 3.3335H6.66659C4.82564 3.3335 3.33325 4.82588 3.33325 6.66683V33.3335C3.33325 35.1744 4.82564 36.6668 6.66659 36.6668H33.3333C35.1742 36.6668 36.6666 35.1744 36.6666 33.3335V6.66683C36.6666 4.82588 35.1742 3.3335 33.3333 3.3335Z"
+          stroke="#151515"
+          strokeWidth="2.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M3.33325 11.667H36.6666"
+          strokeWidth="2.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M3.33325 20H36.6666"
+          strokeWidth="2.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M3.33325 28.3335H36.6666"
+          strokeWidth="2.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
       </svg>
     </i>
-  )
+  );
+}
+
+export function IconWishlist() {
+  return (
+    <i>
+      <svg
+        width={12}
+        height={10}
+        viewBox="0 0 12 10"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M6.15559 1.44504C6.63297 0.96765 7.28045 0.699455 7.95559 0.699455C8.63072 0.699455 9.2782 0.96765 9.75559 1.44504C10.233 1.92243 10.5012 2.56991 10.5012 3.24504C10.5012 3.92017 10.233 4.56765 9.75559 5.04504L9.10059 5.70004L5.50059 9.30004L1.90058 5.70004L1.24558 5.04504C0.768195 4.56765 0.5 3.92017 0.5 3.24504C0.5 2.56991 0.768195 1.92243 1.24558 1.44504C1.72297 0.96765 2.37045 0.699455 3.04558 0.699455C3.72072 0.699455 4.36819 0.96765 4.84558 1.44504L5.50059 2.10004L6.15559 1.44504Z"
+          stroke="#151515"
+          strokeLinecap="round"
+          strokeLinejoin="bevel"
+        />
+      </svg>
+    </i>
+  );
+}
+
+export function IconCompare() {
+  return (
+    <i>
+      <svg
+        width={11}
+        height={12}
+        viewBox="0 0 11 12"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M4.25 1H2.25C1.69772 1 1.25 1.44772 1.25 2V4C1.25 4.55229 1.69772 5 2.25 5H4.25C4.80228 5 5.25 4.55229 5.25 4V2C5.25 1.44772 4.80228 1 4.25 1Z"
+          stroke="#E6704B"
+          strokeLinecap="round"
+          strokeLinejoin="bevel"
+        />
+        <path
+          d="M4.25 7H2.25C1.69772 7 1.25 7.44772 1.25 8V10C1.25 10.5523 1.69772 11 2.25 11H4.25C4.80228 11 5.25 10.5523 5.25 10V8C5.25 7.44772 4.80228 7 4.25 7Z"
+          stroke="#E6704B"
+          strokeLinecap="round"
+          strokeLinejoin="bevel"
+        />
+        <path
+          d="M9.75 7.99998H6.75"
+          stroke="#E6704B"
+          strokeLinecap="round"
+          strokeLinejoin="bevel"
+        />
+        <path
+          d="M8.75 10H6.75"
+          stroke="#E6704B"
+          strokeLinecap="round"
+          strokeLinejoin="bevel"
+        />
+        <path
+          d="M8.75 4H6.75"
+          stroke="#E6704B"
+          strokeLinecap="round"
+          strokeLinejoin="bevel"
+        />
+        <path
+          d="M9.75 1.99998H6.75"
+          stroke="#E6704B"
+          strokeLinecap="round"
+          strokeLinejoin="bevel"
+        />
+      </svg>
+    </i>
+  );
+}
+
+export function IconRating() {
+  return (
+    <i>
+      <svg
+        width={15}
+        height={14}
+        viewBox="0 0 15 14"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M6.8341 1.1266C6.88015 0.980572 6.97155 0.853026 7.09503 0.762489C7.21851 0.671952 7.36764 0.623138 7.52076 0.623138C7.67388 0.623138 7.82301 0.671952 7.94649 0.762489C8.06997 0.853026 8.16138 0.980572 8.20743 1.1266L9.44743 4.93993H13.4474C13.606 4.93394 13.7622 4.98003 13.8921 5.07116C14.0221 5.16229 14.1186 5.29345 14.167 5.44461C14.2153 5.59577 14.2129 5.7586 14.16 5.90824C14.1071 6.05787 14.0067 6.18608 13.8741 6.27327L10.6274 8.6266L11.8674 12.4466C11.9165 12.5921 11.9177 12.7495 11.871 12.8957C11.8242 13.042 11.7319 13.1695 11.6076 13.2596C11.4832 13.3497 11.3333 13.3977 11.1798 13.3965C11.0263 13.3954 10.8771 13.3452 10.7541 13.2533L7.50076 10.8733L4.2541 13.2333C4.1311 13.3252 3.98194 13.3754 3.82839 13.3765C3.67484 13.3777 3.52495 13.3297 3.40061 13.2396C3.27627 13.1495 3.18398 13.022 3.13723 12.8757C3.09049 12.7295 3.09172 12.5721 3.14076 12.4266L4.38076 8.6066L1.1341 6.25327C1.00148 6.16608 0.901063 6.03787 0.848176 5.88824C0.795288 5.7386 0.792843 5.57577 0.841212 5.42461C0.889582 5.27345 0.986108 5.14229 1.11604 5.05116C1.24597 4.96003 1.40217 4.91394 1.56076 4.91993H5.56076L6.8341 1.1266Z"
+          fill="#151515"
+        />
+      </svg>
+    </i>
+  );
 }
