@@ -39,6 +39,9 @@ export default function HeaderContact({ props, item }) {
         <li className="header__contact-item">
           <Link to="/blogpage">Carrers</Link>
         </li>
+        <li className="header__contact-item">
+          <Link to="/checkoutpage">Checkout</Link>
+        </li>
       </ul>
     </div>
   );
