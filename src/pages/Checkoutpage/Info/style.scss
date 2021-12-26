@@ -1,10 +1,7 @@
 @import "../../../assets/css/style.scss";
 
 .checkout__info {
-<<<<<<< HEAD
-=======
     margin-bottom: 65px;
-
     .heading {
         @include text(var(--h2-fs), pb, var(--h2-lh), $black15, none);
         margin-bottom: 4px;
@@ -19,7 +16,6 @@
         }
     }
 
->>>>>>> master
     form {
         display: grid;
         grid-template-columns: 1fr 1fr;
