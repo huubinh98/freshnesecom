@@ -4,7 +4,11 @@ import "./style.scss";
 import avt from "../../assets/img/avt.jpg";
 import classnames from "classnames";
 import { Link } from "react-router-dom";
+<<<<<<< HEAD
 import Tags from "../Tags";
+=======
+// import Tags from "../Tags";
+>>>>>>> master
 
 export const BlogItem = ({ title, size = "meidum" }) => {
   return (

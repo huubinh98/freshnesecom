@@ -1,0 +1,23 @@
+@import '../../assets/css/style.scss';
+
+.categoriesPage {
+    .container {
+        .breadcrumb {
+            height: 50px;
+            @include flex(center, none);
+            @include text(var(--body12-fs), os, var(--body12-lh), $gray-cl, none);
+
+            p {
+                margin-right: 8px;
+            }
+
+            span {
+                margin-right: 8px;
+            }
+
+            p:last-child {
+                color: $black15;
+            }
+        }
+    }
+}

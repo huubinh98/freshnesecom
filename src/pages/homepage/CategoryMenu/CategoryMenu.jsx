@@ -10,7 +10,7 @@ export default function CategoryMenu() {
       <h3 className="heading">Category menu</h3>
       <ul className="cate__list">
         <li className="cate__list-item">
-          <Link to={"/"}>Bakery</Link>
+          <Link to={"/categories"}>Bakery</Link>
         </li>
         <li className="cate__list-item">
           <Link to="/">Fruit and vegetables</Link>
