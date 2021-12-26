@@ -18,10 +18,10 @@ export default function Header() {
       <div className="container">
         <HeaderContact props={contact} />
         <div className="header__search">
-          <div className="logo">
+          <Link to='/' className="logo">
             <h1>ReactShop</h1>
             <Logo />
-          </div>
+          </Link>
           <Search />
           <div className="header__search-left">
             <Account />

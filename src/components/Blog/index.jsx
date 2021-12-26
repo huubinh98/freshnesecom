@@ -4,6 +4,7 @@ import "./style.scss";
 import avt from "../../assets/img/avt.jpg";
 import classnames from "classnames";
 import { Link } from "react-router-dom";
+// import Tags from "../Tags";
 
 export const BlogItem = ({ title, size = "meidum" }) => {
     return (
@@ -12,7 +13,7 @@ export const BlogItem = ({ title, size = "meidum" }) => {
                 <img src={blog} alt="Blog Img" />
             </div>
 
-            <div className="blogTag">Vegetable</div>
+            {/* <Tags color='green' size='small'></Tags> */}
 
             <div className="blogContent">
                 <Link to="" className="blogTitle">

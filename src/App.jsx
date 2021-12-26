@@ -11,6 +11,7 @@ import CheckoutPage from "./pages/Checkoutpage";
 import LoginPage from "./pages/LoginPage";
 import BlogPage from "./pages/BlogPage";
 import { AuthProvider } from "./context/AuthContext";
+import CategoriesPage from "./pages/CategoriesPage";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/checkout" element={<CheckoutPage />} />
           <Route path="/blogpage" element={<BlogPage />} />
+          <Route path='/categories' element={<CategoriesPage />} />
         </Route>
         <Route path="*" element={<LoginPage />} />
         <Route path="*" element={<NotFound />} />
