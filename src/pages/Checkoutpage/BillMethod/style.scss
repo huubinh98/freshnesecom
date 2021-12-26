@@ -1,6 +1,6 @@
-@import "../../../assets/css/style.scss";
+@import '../../../assets/css/style.scss';
 
-.checkout__info {
+.billing-method {
     margin-bottom: 65px;
 
     .heading {
@@ -15,12 +15,5 @@
         p {
             @include text(var(--body12-fs), os, var(--body12-lh), $gray-cl, none);
         }
-    }
-
-    form {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-auto-rows: auto;
-        gap: 32px;
     }
 }
