@@ -5,7 +5,7 @@ import { IconAccount } from "../Icon";
 export default function Account() {
   return (
     <div>
-      <Link to="/LoginPage">
+      <Link to="/login">
         <IconAccount />
       </Link>
     </div>

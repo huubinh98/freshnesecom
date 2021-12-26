@@ -4,7 +4,6 @@ import "./blogpost.scss";
 import Button from "../../../components/Button";
 import { IconArowBtn } from "../../../components/Icon";
 
-
 export default function BlogPost() {
   return (
     <div className="blog__post">
@@ -12,7 +11,12 @@ export default function BlogPost() {
         <div className="section_headline">
           <h3>Our customers says</h3>
 
-          <Button color="simple" size="small" type="icon-right" icon={<IconArowBtn />} >
+          <Button
+            color="simple"
+            size="small"
+            type="icon-right"
+            icon={<IconArowBtn />}
+          >
             Button
           </Button>
         </div>

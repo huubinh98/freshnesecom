@@ -1,0 +1,13 @@
+@import "../../assets/css/style.scss";
+
+.checkoutpage {
+    .container {
+        @include flex(flex-start, space-between);
+        gap: 32px;
+    }
+
+    .checkout__form {
+        flex: 1;
+        margin: 16px 0;
+    }
+}

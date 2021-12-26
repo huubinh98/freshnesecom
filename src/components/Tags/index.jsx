@@ -8,24 +8,22 @@ export default function Tags({
   size = "default",
   type = "default",
   icon,
+  itemTag,
 }) {
-  const { tagList } = data;
   return (
     <>
-      {tagList.map((item, index) => (
-        <div
-          className={classnames(
-            "tag-item",
-            `color-${color}`,
-            `size-${size}`,
-            `type-${type}`,
-            { icon }
-          )}
-          key={index}
-        >
-          {item}
-        </div>
-      ))}
+      <div
+        className={classnames(
+          "tag-item",
+          `color-${color}`,
+          `size-${size}`,
+          `type-${type}`,
+          { icon }
+        )}
+      >
+        {itemTag}
+        {icon}
+      </div>
     </>
   );
 }
