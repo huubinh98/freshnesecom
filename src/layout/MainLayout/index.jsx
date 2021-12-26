@@ -9,7 +9,9 @@ export default function MainLayout() {
     <div>
       <Header />
       <DropdownMenu />
-      <Outlet />
+      <main className="main__layout">
+        <Outlet />
+      </main>
       <Footer />
     </div>
   );

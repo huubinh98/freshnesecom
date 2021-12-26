@@ -5,17 +5,15 @@ import { QuoteItem } from "../../../components/Quote";
 // import arrowButton from "../../../assets/img/arrowButton.svg";
 import { IconArowBtn } from "../../../components/Icon";
 
-import Flickity from 'react-flickity-component';
+import Flickity from "react-flickity-component";
 
 export default function CustomerQuote() {
-
   const flickityOptions = {
     initialIndex: 2,
     pageDots: false,
     groupsCells: 2,
     wrapAround: true,
-  }
-
+  };
 
   return (
     <div className="customerquote">
@@ -23,7 +21,12 @@ export default function CustomerQuote() {
         <div className="section-headline">
           <h3>Our customers says</h3>
 
-          <Button color="simple" size="small" type="icon-right" icon={<IconArowBtn />} >
+          <Button
+            color="simple"
+            size="small"
+            type="icon-right"
+            icon={<IconArowBtn />}
+          >
             Button
           </Button>
         </div>
@@ -31,8 +34,8 @@ export default function CustomerQuote() {
 
       <div className="quote_list">
         <Flickity
-          className={'carousel'} // default ''
-          elementType={'div'} // default 'div'
+          className={"carousel"} // default ''
+          elementType={"div"} // default 'div'
           options={flickityOptions} // takes flickity options {}
           disableImagesLoaded={false} // default false
           reloadOnUpdate // default false

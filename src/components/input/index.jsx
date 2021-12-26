@@ -10,15 +10,13 @@ export default function Input({
   ...inputProps
 }) {
   return (
-    <form action="">
-      <label>
-        <p className="label">{label}</p>
-        <div className={classNames(`input size-${size} pos-${position}`)}>
-          {position === "icon-left" && icon}
-          <input {...inputProps} />
-          {position === "icon-right" && icon}
-        </div>
-      </label>
-    </form>
+    <label>
+      <p className="label">{label}</p>
+      <div className={classNames(`input size-${size} pos-${position}`)}>
+        {position === "icon-left" && icon}
+        <input {...inputProps} />
+        {position === "icon-right" && icon}
+      </div>
+    </label>
   );
 }
