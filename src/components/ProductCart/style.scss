@@ -1,0 +1,68 @@
+@import "../../assets/css/style.scss";
+
+
+.product__cart {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 48px;
+    &-left {
+        .img {
+            @include size(100px, 67px);
+            position: relative;
+            border-radius: var(--radius);
+            overflow: hidden;
+            margin-bottom: 12px;
+            img {
+                @include midimg(100px);
+            }
+        }
+
+        .left-compay {
+            @include flex(center, flex-start);
+            gap: 7px;
+        }
+
+        span {
+            @include text(var(--body12-fs), os, var(--body12-lh), $gray-cl, none);
+        }
+    }
+
+    &-right {
+        flex: 1;
+        .title {
+            @include text(var(--h4-fs), p, var(--h4-lh), $black15, none);
+            margin-bottom: 4px;
+        }
+        .type {
+            display: flex;
+            gap: 14px;
+            margin-bottom: 7px;
+            p {
+                margin-bottom: 7px;
+            }
+            &__title {
+                @include text(var(--body12-fs), os, var(--body12-lh), $gray-cl, none);
+
+            }
+            &__name {
+                @include text(var(--body12-fs), os, var(--body12-lh), $black15, none);
+
+            }
+        }
+
+        .price__item {
+            @include flex(center, space-between);
+            .price {
+                &__discount {
+                    @include text(var(--h3-fs), pb, var(--h3-lh), $green-cl, none);
+                }
+    
+                &__main {
+                    color: $gray-cl;
+                    font-family: pb;
+                    text-decoration: line-through;
+                }
+            }
+        }
+    }
+}
