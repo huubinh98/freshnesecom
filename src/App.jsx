@@ -9,6 +9,7 @@ import CheckoutPage from "./pages/CheckoutPage";
 import LoginPage from "./pages/LoginPage";
 import BlogPage from "./pages/BlogPage";
 import { AuthProvider } from "./context/AuthContext";
+import CategoriesPage from "./pages/CategoriesPage";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route index element={<HomePage />} />
           <Route path="/checkoutpage" element={<CheckoutPage />} />
           <Route path="/blogpage" element={<BlogPage />} />
+          <Route path='/categories' element={<CategoriesPage />} />
         </Route>
         <Route path="" element={<LoginPage />} />
         <Route path="*" element={<NotFound />} />

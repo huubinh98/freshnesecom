@@ -19,7 +19,7 @@
         }
     }
 
-    .blogTag {
+    .tag-item {
         @include text(var(--body12-fs), pb, var(--body12-lh), $green-cl, none);
         padding: 2px 8px;
         border-radius: 12px;
@@ -95,7 +95,7 @@
                 }
             }
 
-            .blogTag {
+            .tag-item {
                 position: absolute;
                 top: 5%;
                 left: 5%;
@@ -132,7 +132,7 @@
                 min-height: 96px;
             }
 
-            .blogTag {
+            .tag-item {
                 display: none;
             }
 
