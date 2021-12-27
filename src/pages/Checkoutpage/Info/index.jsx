@@ -25,6 +25,12 @@ export default function Info() {
           placeholder="Choose a state or Country"
         />
         <Input label="ZIP/Postal code" placeholder="Postal code or ZIP" />
+        <Input
+          size="small"
+          type="checkbox"
+          text="Ship to a different address?"
+          width
+        />
       </form>
     </div>
   );

@@ -9,4 +9,41 @@
     .desc {
         margin-bottom: 40px;
     }
+
+    .checkout__fee {
+        @include flex(center, space-between);
+        gap: 12px;
+        margin-bottom: 32px;
+        @include text(var(--body12-fs), pb, var(--body12-lh), $black15, none);
+        p {
+            margin-bottom: 12px;
+        }
+        &-number {
+            text-align: right;
+        }
+    }
+
+    .input {
+        padding-right: 0;
+        input {
+            flex: 1;
+        }
+    }
+
+    .total {
+        @include flex(center, space-between);
+        margin-top: 40px;
+        &__order {
+            p {
+                @include text(var(--body12-fs), pb, var(--body12-lh), $black15, none);
+                &:last-child {
+                    font-family: os;
+                    color: $green-cl;
+                }
+            }
+        }
+        &__num {
+            @include text(var(--num-fs), pb, var(--num-lh), $green-cl, none);
+        }
+    }
 }
