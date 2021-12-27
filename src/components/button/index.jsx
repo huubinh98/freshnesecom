@@ -9,6 +9,7 @@ export default function Button({
   type = "default",
   round = true,
   icon,
+  loading,
 }) {
   return (
     <button
@@ -19,10 +20,11 @@ export default function Button({
         `type-${type}`,
         { round }
       )}
+      disabled={loading}
     >
       {type === "icon-left" && icon}
       {children}
       {type === "icon-right" && icon}
     </button>
   );
-} 
+}

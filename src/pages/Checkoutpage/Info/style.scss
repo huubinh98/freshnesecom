@@ -1,7 +1,6 @@
 @import "../../../assets/css/style.scss";
 
 .checkout__info {
-    margin-bottom: 65px;
     .heading {
         @include text(var(--h2-fs), pb, var(--h2-lh), $black15, none);
         margin-bottom: 4px;

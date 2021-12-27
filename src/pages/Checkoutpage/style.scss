@@ -2,7 +2,6 @@
 
 .checkoutpage {
     margin: 16px 0;
-
     .heading {
         @include text(var(--h2-fs), pb, var(--h2-lh), $black15, none)
     }
