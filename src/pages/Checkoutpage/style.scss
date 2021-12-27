@@ -2,14 +2,17 @@
 
 .checkoutpage {
     margin: 16px 0;
+
     .heading {
         @include text(var(--h2-fs), pb, var(--h2-lh), $black15, none)
     }
+
     .desc {
         @include text(var(--body12-fs), os, var(--body12-lh), $gray-cl, none);
         margin-bottom: 32px;
         @include overtext(1);
     }
+
     .container {
         @include flex(flex-start, space-between);
         gap: 32px;

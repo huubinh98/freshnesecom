@@ -1,0 +1,18 @@
+@import '../../assets/css/style.scss';
+
+.commentBox {
+    label {
+        @include text(var(--body12-fs), pb, var(--body12-lh), $black15, none);
+        margin-bottom: 6px;
+    }
+
+    textarea {
+        width: 100%;
+        border: 1px solid $d1;
+        border-radius: var(--radius);
+        overflow: hidden;
+        padding: 11px 21px;
+        resize: none;
+        outline: none;
+    }
+}

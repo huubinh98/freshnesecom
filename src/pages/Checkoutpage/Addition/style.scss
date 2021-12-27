@@ -1,0 +1,19 @@
+@import '../../../assets/css/style.scss';
+
+.addition {
+    margin-bottom: 65px;
+
+    .heading {
+        @include text(var(--h2-fs), pb, var(--h2-lh), $black15, none);
+        margin-bottom: 4px;
+    }
+
+    .checkout-step {
+        margin-bottom: 32px;
+        @include flex(center, space-between);
+
+        p {
+            @include text(var(--body12-fs), os, var(--body12-lh), $gray-cl, none);
+        }
+    }
+}
