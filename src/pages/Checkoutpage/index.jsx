@@ -1,4 +1,5 @@
 import React from "react";
+import Addition from "./Addition";
 import BillMethod from "./BillMethod";
 import Info from "./Info";
 import OrderSumany from "./OrderSumany";
@@ -13,6 +14,7 @@ const CheckoutPage = () => {
           <Info />
           <BillMethod />
           <Payment />
+          <Addition />
         </div>
         <OrderSumany />
       </div>
