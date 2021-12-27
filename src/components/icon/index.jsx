@@ -496,8 +496,8 @@ export function VisaLogo() {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <g clip-path="url(#clip0_18311_38603)">
-          <g clip-path="url(#clip1_18311_38603)">
+        <g clipPath="url(#clip0_18311_38603)">
+          <g clipPath="url(#clip1_18311_38603)">
             <path
               d="M21.233 17.7692H17.2637L19.7464 2.28076H23.7155L21.233 17.7692Z"
               fill="#00579F"
