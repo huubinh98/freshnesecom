@@ -17,10 +17,10 @@ function App() {
       <Routes>
         <Route path="/" element={<MainLayout />}>
           <Route index element={<HomePage />} />
-          <Route path="/checkoutpage" element={<CheckoutPage />} />
           <Route path="/blogpage" element={<BlogPage />} />
           <Route path="/categories" element={<CategoriesPage />} />
         </Route>
+        <Route path="/checkoutpage" element={<CheckoutPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
