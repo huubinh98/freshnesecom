@@ -29,7 +29,8 @@
         @include text(var(--body14-fs), p, var(--body14-lh), $black15, none);
         border: none;
         outline: none;
-        height: 100%;
+        background: transparent;
+        // height: 100%;
         width: 100%;
         text-align: left;
         &::placeholder {
@@ -37,8 +38,24 @@
         }
     }
 
-    .size {
+    &.size {
 
+        &-large {
+            max-width: 100%;
+            width: 100%;
+        }
+
+        &-small {
+            max-width: 244px;
+            width: 100%;
+        }
+    }
+
+    &.width {
+        input {
+            width: 16px;
+            height: 16px;
+        }
     }
 }
 
