@@ -1,61 +1,72 @@
 @import '../../assets/css/style.scss';
-.label {
-    @include text(var(--body12-fs), pb, var(--body12-lh), $black15, none);
-    margin-bottom: 6px;
-}
-.input {
-    // background-color: $bg-nav;
-    width: 100%;
-    border: 1px solid $d1;
-    border-radius: var(--radius);
-    height: 42px;
-    overflow: hidden;
-    padding: 0 16px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    .pos {
-        &-icon-left {
-            i {
-                display: flex;
-                margin-left: 12px;
-            }
-            svg {
-                display: block;
-            }
-        }
+
+label {
+    .label {
+        @include text(var(--body12-fs), pb, var(--body12-lh), $black15, none);
+        margin-bottom: 6px;
     }
-    input {
-        @include text(var(--body14-fs), p, var(--body14-lh), $black15, none);
-        border: none;
-        outline: none;
-        background: transparent;
-        // height: 100%;
+
+    .input {
+        background-color: $bg-nav;
         width: 100%;
-        text-align: left;
-        &::placeholder {
-            color: $gray-cl;
+        border: 1px solid $d1;
+        border-radius: var(--radius);
+        height: 42px;
+        overflow: hidden;
+        padding: 0 16px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        .pos {
+            &-icon-left {
+                i {
+                    display: flex;
+                    margin-left: 12px;
+                }
+
+                svg {
+                    display: block;
+                }
+            }
         }
-    }
 
-    &.size {
-
-        &-large {
-            max-width: 100%;
-            width: 100%;
-        }
-
-        &-small {
-            max-width: 244px;
-            width: 100%;
-        }
-    }
-
-    &.width {
         input {
-            width: 16px;
-            height: 16px;
+            @include text(var(--body14-fs), p, var(--body14-lh), $black15, none);
+            border: none;
+            outline: none;
+            background: transparent;
+            // height: 100%;
+            width: 100%;
+            text-align: left;
+
+            &::placeholder {
+                color: $gray-cl;
+            }
+        }
+
+        &.size {
+
+            &-large {
+                max-width: 100%;
+                width: 100%;
+            }
+
+            &-small {
+                max-width: 244px;
+                width: 100%;
+            }
+        }
+
+        &.width {
+            input {
+                width: 16px;
+                height: 16px;
+            }
+
+            &~.label {
+                display: none;
+            }
         }
     }
 }
-
