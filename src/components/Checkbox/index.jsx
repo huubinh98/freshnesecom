@@ -8,8 +8,8 @@ const Checkbox = ({ label, type }) => {
             'squaredcheck',
             `type-${type}`
         )}>
-            <input type="checkbox" value="None" id="squaredcheck" className="checkbox1" name="check" />
-            <label htmlFor="squaredcheck"><span>{label}</span></label>
+            <input type="checkbox" id="squaredcheck" />
+            <label htmlFor="squaredcheck">{label}</label>
         </div>
     )
 }
