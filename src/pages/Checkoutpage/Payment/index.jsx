@@ -1,4 +1,10 @@
 import React from 'react'
+import { PaypalLogo } from '../../../components/Icon'
+import { BitcoinLogo } from '../../../components/Icon'
+import { VisaLogo } from '../../../components/Icon'
+import Radio from '../../../components/Radio'
+import RadioDropdown from '../../../components/RadioDropdown'
+import './style.scss'
 
 const Payment = () => {
     return (
@@ -6,9 +12,13 @@ const Payment = () => {
             <h2 className="heading">Payment method</h2>
 
             <div className="checkout-step">
-                <p className="desc">Please enter your payment method</p>
-                <p className="desc">Step 3 of 5</p>
+                <p >Please enter your payment method</p>
+                <p >Step 3 of 5</p>
             </div>
+
+            <RadioDropdown payment='Credit Card' logo={<VisaLogo />} />
+            <Radio label='Paypal' logo={<PaypalLogo />} />
+            <Radio label='Bitcoin' logo={<BitcoinLogo />} />
         </div>
     )
 }

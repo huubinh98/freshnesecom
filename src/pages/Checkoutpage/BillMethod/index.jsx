@@ -10,8 +10,8 @@ const BillMethod = () => {
             <h2 className='heading'>Billing method</h2>
 
             <div className="checkout-step">
-                <p className="desc">Please enter your payment method</p>
-                <p className="desc">Step 2 of 5</p>
+                <p>Please enter your payment method</p>
+                <p>Step 2 of 5</p>
             </div>
             <form>
                 <Radio label='FedEx' price='+32 USD' condition='Additional price' logo={<BillMethod1 />} />
