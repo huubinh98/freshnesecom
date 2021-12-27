@@ -1,1 +1,46 @@
-@import '../../assets/css/style.scss'
+@import '../../assets/css/style.scss';
+
+.radioDropdown {
+    padding: 16px;
+    border: 1px solid $d1;
+    border-radius: 12px;
+    margin-bottom: 16px;
+
+    .chooseField {
+        @include flex(center, space-between);
+        margin-bottom: 35px;
+
+        .left {
+            @include flex(center, center);
+
+            label {
+                margin-left: 18px;
+            }
+
+            input {
+                @include size(20px);
+            }
+        }
+    }
+
+    form {
+        .card-info {
+            @include flex(center, space-between);
+            margin-top: 32px;
+
+            .left {
+                width: 55%;
+            }
+
+            .right {
+                @include flex(center, space-between);
+                width: 40%;
+
+                label {
+                    width: 50%;
+                    margin-left: 16px;
+                }
+            }
+        }
+    }
+}

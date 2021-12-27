@@ -4,8 +4,8 @@
     margin-bottom: 6px;
 }
 .input {
-    background-color: $bg-nav;
-    max-width: 320px;
+    // background-color: $bg-nav;
+    width: 100%;
     border: 1px solid $d1;
     border-radius: var(--radius);
     height: 42px;

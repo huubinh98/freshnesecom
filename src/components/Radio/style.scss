@@ -18,6 +18,14 @@
             margin-left: 18px;
         }
 
+        input {
+            @include size(20px);
+        }
+
+        .radio-method {
+            @include flex(center, center);
+        }
+
         .price-method {
             @include flex(center, center);
 

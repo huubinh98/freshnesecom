@@ -9,8 +9,8 @@ export default function Info() {
       <h2 className="heading">Billing info</h2>
 
       <div className="checkout-step">
-        <p className="desc">Please enter your billing info</p>
-        <p className="desc">Step 1 of 5</p>
+        <p >Please enter your billing info</p>
+        <p >Step 1 of 5</p>
       </div>
 
       <form>
