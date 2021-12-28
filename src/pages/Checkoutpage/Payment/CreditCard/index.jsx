@@ -1,20 +1,10 @@
 import React from 'react'
+import Input from '../../../../components/Input'
 import './style.scss'
-import Input from '../Input'
 
-const RadioDropdown = ({ payment, logo }) => {
+const CreditCard = () => {
     return (
-        <div className="radioDropdown">
-            <div className="chooseField">
-                <div className="left">
-                    <input type="radio" />
-                    <label htmlFor="">{payment}</label>
-                </div>
-                <div className="right">
-                    {logo}
-                </div>
-            </div>
-
+        <div>
             <form action="">
                 <Input label='Card number' placeholder="Card Number" />
                 <div className="card-info">
@@ -32,4 +22,4 @@ const RadioDropdown = ({ payment, logo }) => {
     )
 }
 
-export default RadioDropdown
+export default CreditCard
