@@ -1,7 +1,7 @@
 @import '../../../assets/css/style.scss';
 
 .billing-method {
-    margin-bottom: 65px;
+    padding: var(--pd-section);
 
     .heading {
         @include text(var(--h2-fs), pb, var(--h2-lh), $black15, none);

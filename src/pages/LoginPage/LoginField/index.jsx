@@ -23,8 +23,6 @@ const Login = () => {
     }
 
     setErr(errObj);
-
-    console.log(formLogin);
   };
 
   return (
