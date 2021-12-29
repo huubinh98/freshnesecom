@@ -20,5 +20,12 @@
         grid-template-columns: 1fr 1fr;
         grid-auto-rows: auto;
         gap: 32px;
+
+        label {
+            .error {
+                @include text(var(--body12-fs), psb, var(--body12-lh), red, none);
+                margin-bottom: 16px
+            }
+        }
     }
 }

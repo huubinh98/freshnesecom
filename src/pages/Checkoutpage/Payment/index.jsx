@@ -3,6 +3,7 @@ import { PaypalLogo } from '../../../components/Icon'
 import { BitcoinLogo } from '../../../components/Icon'
 import { VisaLogo } from '../../../components/Icon'
 import Radio from '../../../components/Radio'
+import useForm from '../../../hook/useForm'
 import Bitcoin from './Bitcoin'
 import CreditCard from './CreditCard'
 import Paypal from './Paypal'
@@ -10,7 +11,11 @@ import './style.scss'
 
 const Payment = () => {
 
-    const [checkedOption, isCheckedOption] = useState();
+    const { selectedOption, setSelectedOption, handleSubmitOption, errOption } = useForm(
+        {
+            
+        }
+    )
 
     const methods = [
         {
@@ -39,15 +44,20 @@ const Payment = () => {
                 <p >Step 3 of 5</p>
             </div>
 
-            {
-                methods.map((method, index) => {
-                    return <Radio {...method} key={index}
-                        onChange={() => isCheckedOption(method.label)}
-                        isChecked={checkedOption === method.label}
-                    />
-                })
-            }
-            
+            <form>
+                {
+                    methods.map((method, index) => {
+                        return <Radio {...method} key={index}
+                            onChange={() => setSelectedOption(method.label)}
+                            isChecked={selectedOption === method.label}
+                        />
+                    })
+                }
+                {
+                    errOption && <p className="error">{errOption?.catchErr}</p>
+                }
+            </form>
+            <button onClick={handleSubmitOption}>Submit</button>
         </div>
     )
 }

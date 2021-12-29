@@ -2,12 +2,12 @@ import React, { useState } from 'react'
 import { BillMethod2 } from '../../../components/Icon'
 import { BillMethod1 } from '../../../components/Icon'
 import Radio from '../../../components/Radio'
+import useForm from '../../../hook/useForm'
 import './style.scss'
 
 const BillMethod = () => {
 
-    const [selectedOption, setSelectedOption] = useState('');
-
+    const { selectedOption, setSelectedOption, handleSubmitOption, errOption } = useForm()
     const methods = [
         {
             label: 'FedEx',
@@ -25,17 +25,7 @@ const BillMethod = () => {
 
     console.log('selectedOption :>> ', selectedOption);
 
-    const [err, setErr] = useState({});
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-
-        let errObj = {};
-        if (!selectedOption) {
-            errObj.catchErr = 'Please choose an option'
-        }
-        setErr(errObj)
-    }
 
     return (
         <div className="billing-method">
@@ -55,10 +45,10 @@ const BillMethod = () => {
                     })
                 }
                 {
-                    err && <p className="error">{err?.catchErr}</p>
+                    errOption && <p className="error">{errOption?.catchErr}</p>
                 }
             </form>
-                <button onClick={handleSubmit}>Submit</button>
+            <button onClick={handleSubmitOption}>Submit</button>
         </div>
 
     )
