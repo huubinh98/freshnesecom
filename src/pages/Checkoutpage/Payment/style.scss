@@ -16,4 +16,11 @@
         }
     }
 
+    form {
+        .error {
+            @include text(var(--body12-fs), psb, var(--body12-lh), red, none);
+            margin-bottom: 16px
+        }
+    }
+
 }
