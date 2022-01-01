@@ -4,13 +4,14 @@ import "./style.scss";
 
 export default function Input({
   typeInput = "text",
+  size = "default",
+  position = "default",
+  clear,
   label,
   button,
   icon,
   text,
   width,
-  size = "default",
-  position = "default",
   err,
   ...inputProps
 }) {
@@ -18,7 +19,9 @@ export default function Input({
     <label>
       {label ? <p className="label">{label}</p> : ""}
       <div
-        className={classNames(`input size-${size} pos-${position}`, { width })}
+        className={classNames(`input ${clear} size-${size} pos-${position}`, {
+          width,
+        })}
       >
         {position === "icon-left" && icon}
         {typeInput === "select" ? <select></select> : <input {...inputProps} />}

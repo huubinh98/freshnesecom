@@ -88,7 +88,6 @@ export default function Info() {
   return (
     <div className="checkout__info">
       <h2 className="heading">Billing info</h2>
-
       <div className="checkout-step">
         <p>Please enter your billing info</p>
         <p>Step 1 of 5</p>
@@ -98,7 +97,9 @@ export default function Info() {
         {data.map((item, i) => {
           return (
             <Input
+              type="type"
               key={i}
+              size="large"
               label={item.label}
               placeholder={item.placeholder}
               {...register(item.name)}
@@ -109,7 +110,6 @@ export default function Info() {
             />
           );
         })}
-        <Button loading={isFetChing}>Submit</Button>
       </form>
     </div>
   );
