@@ -5,16 +5,14 @@ label {
         @include text(var(--body12-fs), pb, var(--body12-lh), $black15, none);
         margin-bottom: 6px;
     }
-
     .input {
         background-color: $bg-nav;
-        width: 100%;
         border: 1px solid $d1;
         border-radius: var(--radius);
-        height: 42px;
         overflow: hidden;
+        height: 42px;
         padding: 0 16px;
-        display: flex;
+        display: inline-flex;
         align-items: center;
         gap: 12px;
 
@@ -36,8 +34,6 @@ label {
             border: none;
             outline: none;
             background: transparent;
-            // height: 100%;
-            width: 100%;
             text-align: left;
 
             &::placeholder {
@@ -46,27 +42,23 @@ label {
         }
 
         &.size {
-
             &-large {
                 max-width: 100%;
                 width: 100%;
-            }
-
-            &-small {
-                max-width: 244px;
-                width: 100%;
+                input {
+                    width: 100%;
+                }
             }
         }
-
         &.width {
             input {
                 width: 16px;
                 height: 16px;
             }
-
-            &~.label {
-                display: none;
-            }
+        }
+        &.clear {
+            background-color: none;
+            border: none;
         }
     }
 
