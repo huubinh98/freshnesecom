@@ -32,42 +32,36 @@ export default function Info() {
       label: "First name",
       placeholder: "First name",
       name: "firstname",
-      // typeInput=""
     },
     {
       id: 2,
       label: "Last name",
       placeholder: "Last name",
       name: "lastname",
-      // typeInput=""
     },
     {
       id: 3,
       label: "Email address",
       placeholder: "Email address",
       name: "email",
-      // typeInput=""
     },
     {
       id: 4,
       label: "Phone number",
       placeholder: "Phone number",
       name: "phone",
-      // typeInput=""
     },
     {
       id: 4,
       label: "Address",
       placeholder: "Address",
       name: "address",
-      // typeInput=""
     },
     {
       id: 5,
       label: "Town / City",
       placeholder: "Town or City",
       name: "city",
-      // typeInput=""
     },
     {
       id: 6,
@@ -81,7 +75,6 @@ export default function Info() {
       label: "ZIP/Postal code",
       placeholder: "Postal code or ZIP",
       name: "zip",
-      // typeInput=""
     },
   ];
 

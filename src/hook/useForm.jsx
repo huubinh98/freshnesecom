@@ -5,9 +5,12 @@ const regexEmail =
 
 const regexPhone = /(84|0[3|5|7|8|9])+([0-9]{8})\b/;
 
+const regexZip = /^[1-9][0-9][0-9][0-9][0-9][0-9]?$|^100$/;
+
 export default function useForm(initialValue, err) {
   const [form, setForm] = useState(initialValue);
   const [error, setError] = useState({ err });
+  const [selectedOption, setSelectedOption] = useState('');
 
   const register = (name) => {
     return {
@@ -24,39 +27,41 @@ export default function useForm(initialValue, err) {
   const validate = () => {
     let errObj = {};
     if (!form.firstname.trim()) {
-      errObj.firstname = "Vui lòng nhập firstname";
+      errObj.firstname = "Please enter your Firstname";
     }
 
     if (!form.lastname.trim()) {
-      errObj.lastname = "Vui lòng nhập lastname";
+      errObj.lastname = "Please enter your Lastname";
     }
 
     if (!form.email) {
-      errObj.email = "Vui lòng nhập email";
+      errObj.email = "Please enter your email";
     } else if (!regexEmail.test(form.email)) {
-      errObj.email = "Vui lòng nhập đúng định dạng";
+      errObj.email = "Please enter your email as equired";
     }
 
     if (!form.phone) {
-      errObj.phone = "Vui lòng nhập số điện thoại";
+      errObj.phone = "Please enter your phone number";
     } else if (!regexPhone.test(form.phone)) {
-      errObj.phone = "Trường này phải là số điện thoại";
+      errObj.phone = "This field must be number";
     }
 
     if (!form.address) {
-      errObj.address = "Vui lòng nhập địa chỉ";
+      errObj.address = "Please enter your address";
     }
 
     if (!form.city) {
-      errObj.city = "Vui lòng nhập thành phố";
+      errObj.city = "Please enter your city";
     }
 
     if (!form.country) {
-      errObj.country = "Vui lòng chọn Quốc gia";
+      errObj.country = "Please enter your nation";
     }
 
     if (!form.zip) {
-      errObj.zip = "Vui lòng nhập mã code";
+      errObj.zip = "Please enter your ZIP Code";
+    } else if (!regexZip.test(form.zip)) {
+      errObj.zip = "This field must be number";
     }
     setError(errObj);
 
@@ -70,8 +75,25 @@ export default function useForm(initialValue, err) {
       callbackFunc(form);
     }
   };
+
+  const [errOption, setErrOtion] = useState({});
+
+  const handleSubmitOption = (e) => {
+      e.preventDefault();
+
+      let errObj = {};
+      if (!selectedOption) {
+          errObj.catchErr = 'Please choose an option'
+      }
+      setErrOtion(errObj)
+  }
+  
   return {
     handleSubmit,
     register,
+    selectedOption,
+    setSelectedOption,
+    handleSubmitOption,
+    errOption
   };
 }
