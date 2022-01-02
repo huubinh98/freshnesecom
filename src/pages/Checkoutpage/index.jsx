@@ -3,6 +3,7 @@ import Button from "../../components/Button";
 import DropdownMenu from "../../components/DropdownMenu";
 import Header from "../../components/Header";
 import { Security } from "../../components/Icon";
+import Input from "../../components/Input";
 import Addition from "./Addition";
 import BillMethod from "./BillMethod";
 import Confirmation from "./Confirmation";
@@ -24,11 +25,14 @@ const CheckoutPage = () => {
             <Payment />
             <Addition />
             <Confirmation />
-            <Button size='large'>Complete order</Button>
+            <Button size="large">Complete order</Button>
             <div className="security-policy">
               <Security />
               <p>All your data are safe</p>
-              <p>We are using the most advanced security to provide you the best experience ever.</p>
+              <p>
+                We are using the most advanced security to provide you the best
+                experience ever.
+              </p>
             </div>
           </div>
           <OrderSumany />
