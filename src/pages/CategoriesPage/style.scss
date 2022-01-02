@@ -19,5 +19,39 @@
                 color: $black15;
             }
         }
+
+        .headline {
+            @include flex(center, space-between);
+
+            .left {
+                h1 {
+                    @include text(var(--h1-fs), psb, var(--h1-lh), $black15, none);
+                }
+            }
+
+            .right {
+                .tab_list {
+                    @include flex(center, center);
+
+                    .tab-item {
+                        @include flex(center, center);
+                        margin-left: 24px;
+                        cursor: pointer;
+
+                        svg {
+                            @include size(13.33px);
+                        }
+
+                        span {
+                            margin-left: 5px
+                        }
+
+                        .tag-item {
+                            margin: 0 !important;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
