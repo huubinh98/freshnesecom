@@ -20,11 +20,9 @@ const Radio = ({ label, price, condition, logo, onChange, isChecked, content }) 
                     {logo}
                 </div>
             </div>
-            <div className="payment-info">
-                {
-                    isChecked ? content : ''
-                }
-            </div>
+            {
+                isChecked ? <div className="payment-info">{content}</div> : ''
+            }
         </>
     )
 }

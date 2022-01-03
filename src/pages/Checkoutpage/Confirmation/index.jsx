@@ -17,7 +17,8 @@ const Confirmation = () => {
 
     const handleSubmit = () => {
         if (policy1 && policy2) {
-            alert('Validated')
+            const temp = { policy1: true, policy2: true }
+            console.log(temp)
         } else {
             alert('Please agree all the policy')
         }
@@ -43,7 +44,7 @@ const Confirmation = () => {
                 type='checkbox'
                 onChange={handleChange('policy2')}
             />
-
+            
             <button onClick={handleSubmit}>Submit</button>
         </div>
     )
