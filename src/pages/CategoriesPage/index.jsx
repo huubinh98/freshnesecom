@@ -2,6 +2,7 @@ import React from 'react'
 import { IconList } from '../../components/Icon'
 import { IconGrid } from '../../components/Icon'
 import Input from '../../components/Input'
+import ProductItem from '../../components/ProductItem'
 import Tags from '../../components/Tags'
 import './style.scss'
 
@@ -52,28 +53,61 @@ const CategoriesPage = () => {
                             </li>
                             <li className="categories-item">
                                 <span>Category Name</span>
-                                <Tags itemTag='320' color='green' size='small' />
+                                <Tags itemTag='112' color='green' size='small' />
                             </li>
                             <li className="categories-item">
                                 <span>Category Name</span>
-                                <Tags itemTag='320' color='green' size='small' />
+                                <Tags itemTag='32' color='green' size='small' />
                             </li>
                             <li className="categories-item">
                                 <span>Category Name</span>
-                                <Tags itemTag='320' color='green' size='small' />
+                                <Tags itemTag='48' color='green' size='small' />
                             </li>
 
                         </ul>
 
                         <ul className="brand_list">
                             <h3 className='sidebar-title'>Brands</h3>
-                            {/* <Input type='checkbox' label='Filtre by brand item' /> */}
+                            <div className="brand-item">
+                                <Input type='checkbox' clear='clear' width text='Filtre by brand item' />
+                            </div>
+                            <div className="brand-item">
+                                <Input type='checkbox' clear='clear' width text='Filtre by brand item' />
+                            </div>
+                            <div className="brand-item">
+                                <Input type='checkbox' clear='clear' width text='Filtre by brand item' />
+                            </div>
+                            <div className="brand-item">
+                                <Input type='checkbox' clear='clear' width text='Filtre by brand item' />
+                            </div>
+                            <div className="brand-item">
+                                <Input type='checkbox' clear='clear' width text='Filtre by brand item' />
+                            </div>
                         </ul>
 
-                        
+                        <ul className="rate_list">
+                            <h3 className='sidebar-title'>Rating</h3>
+                            <div className="rate-item">
+                                <Input type='checkbox' clear='clear' width text='5 star' />
+                            </div>
+                            <div className="rate-item">
+                                <Input type='checkbox' clear='clear' width text='4 star' />
+                            </div>
+                            <div className="rate-item">
+                                <Input type='checkbox' clear='clear' width text='3 star' />
+                            </div>
+                            <div className="rate-item">
+                                <Input type='checkbox' clear='clear' width text='2 star' />
+                            </div>
+                            <div className="rate-item">
+                                <Input type='checkbox' clear='clear' width text='1 star' />
+                            </div>
+                        </ul>
+
+
                     </div>
                     <div className="categories_content-product">
-
+                        <ProductItem />
                     </div>
                 </div>
             </div>

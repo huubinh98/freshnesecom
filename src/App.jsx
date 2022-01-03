@@ -10,20 +10,24 @@ import LoginPage from "./pages/LoginPage";
 import BlogPage from "./pages/BlogPage";
 import { AuthProvider } from "./context/AuthContext";
 import CategoriesPage from "./pages/CategoriesPage";
+import { Provider } from "react-redux";
+import store from "./store";
 
 function App() {
   return (
     <AuthProvider>
-      <Routes>
-        <Route path="/" element={<MainLayout />}>
-          <Route index element={<HomePage />} />
-          <Route path="/blogpage" element={<BlogPage />} />
-          <Route path="/categories" element={<CategoriesPage />} />
-        </Route>
-        <Route path="/checkoutpage" element={<CheckoutPage />} />
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+      <Provider store={store}>
+        <Routes>
+          <Route path="/" element={<MainLayout />}>
+            <Route index element={<HomePage />} />
+            <Route path="/blogpage" element={<BlogPage />} />
+            <Route path="/categories" element={<CategoriesPage />} />
+          </Route>
+          <Route path="/checkoutpage" element={<CheckoutPage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Provider>
     </AuthProvider>
   );
 }

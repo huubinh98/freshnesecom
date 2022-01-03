@@ -53,5 +53,54 @@
                 }
             }
         }
+
+        .options_category {}
+
+        .categories_content {
+            display: flex;
+
+            &-sidebar {
+                width: 30%;
+
+                .sidebar-title {
+                    @include text(var(--h3-fs), psb, var(--h3-lh), $black15, none);
+                    margin: 16px 0;
+                }
+
+                .categories_list {
+                    .categories-item {
+                        @include flex(center, space-between);
+                    }
+                }
+
+                .brand_list {
+                    .brand-item {
+                        @include flex(flex-start, none);
+
+                        label {
+                            .input {
+                                padding: 0;
+                            }
+                        }
+                    }
+                }
+
+                .rate_list {
+                    .rate-item {
+                        @include flex(flex-start, none);
+
+                        label {
+                            .input {
+                                padding: 0;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &-product {
+                width: 70%;
+            }
+        }
     }
 }
