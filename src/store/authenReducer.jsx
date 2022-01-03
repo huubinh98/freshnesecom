@@ -1,4 +1,3 @@
-/* eslint-disable default-case */
 import React from 'react'
 
 const user = JSON.parse(localStorage.getItem('login'));
@@ -26,7 +25,6 @@ const authenReducer = (state = initialState, action) => {
         default:
             return state
     }
-
 }
 
 export default authenReducer

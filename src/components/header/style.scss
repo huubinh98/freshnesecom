@@ -10,21 +10,29 @@
         @include flex(center, space-between);
         height: var(--height-headercontact);
         border-bottom: 1px solid rgba(21, 21, 21, 0.05);
+
         &-list {
             @include flex(center, space-between);
             gap: 33px;
             height: 100%;
         }
+
         &-item {
             display: flex;
             align-items: center;
             height: 100%;
             @include text(var(--body12-fs), os, var(--body12-lh), inherit, none);
             margin: auto;
+
             a {
                 color: $green-cl;
                 display: block;
                 padding: 18px 0;
+                @include transition($t);
+
+                &:hover {
+                    color: $black15;
+                }
             }
         }
     }
@@ -33,11 +41,13 @@
         @include flex(center, space-between);
         position: relative;
         height: calc(var(--height-header) - var(--height-headercontact));
+
         .logo {
             h1 {
                 display: none;
             }
         }
+
         .form__search {
             @include mid();
             display: flex;
@@ -48,21 +58,25 @@
             background-color: $bg-nav;
             border: 1px solid $d1;
             border-radius: 12px;
+
             .category {
                 position: relative;
                 cursor: pointer;
                 position: relative;
                 padding-left: 16px;
-                margin-right:24px;
+                margin-right: 24px;
                 height: 100%;
-                @include flex( center, center);
+                @include flex(center, center);
+
                 .current {
-                    @include flex( center, center);
+                    @include flex(center, center);
                     height: 100%;
+
                     span {
                         padding-right: 14px;
                     }
                 }
+
                 .option {
                     position: absolute;
                     bottom: -40px;
@@ -70,6 +84,7 @@
                     display: none;
                 }
             }
+
             input {
                 border: none;
                 padding-left: 24px;
@@ -86,13 +101,15 @@
 
             .btn__search {
                 height: 100%;
-                @include flex( center, center);
+                @include flex(center, center);
                 padding: 0 16px;
+
                 img {
                     @include size(20);
                 }
             }
         }
+
         &-left {
             display: flex;
             gap: 40px;
