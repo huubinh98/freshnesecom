@@ -5,6 +5,7 @@ import Input from '../../components/Input'
 import ProductItem from '../../components/ProductItem'
 import Tags from '../../components/Tags'
 import './style.scss'
+import Rating from '@mui/material/Rating';
 
 const CategoriesPage = () => {
     return (
@@ -88,28 +89,34 @@ const CategoriesPage = () => {
                         <ul className="rate_list">
                             <h3 className='sidebar-title'>Rating</h3>
                             <div className="rate-item">
-                                <Input type='checkbox' clear='clear' width text='5 star' />
+                                <Input type='checkbox' clear='clear' />
+                                <Rating name="read-only" value={5} readOnly />
                             </div>
                             <div className="rate-item">
-                                <Input type='checkbox' clear='clear' width text='4 star' />
+                                <Input type='checkbox' clear='clear' />
+                                <Rating name="read-only" value={4} readOnly />
                             </div>
                             <div className="rate-item">
-                                <Input type='checkbox' clear='clear' width text='3 star' />
+                                <Input type='checkbox' clear='clear' />
+                                <Rating name="read-only" value={3} readOnly />
+
                             </div>
                             <div className="rate-item">
-                                <Input type='checkbox' clear='clear' width text='2 star' />
+                                <Input type='checkbox' clear='clear' />
+                                <Rating name="read-only" value={2} readOnly />
                             </div>
                             <div className="rate-item">
-                                <Input type='checkbox' clear='clear' width text='1 star' />
+                                <Input type='checkbox' clear='clear' />
+                                <Rating name="read-only" value={1} readOnly />
                             </div>
                         </ul>
-
 
                     </div>
                     <div className="categories_content-product">
                         <ProductItem />
                     </div>
                 </div>
+                
             </div>
 
         </div>

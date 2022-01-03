@@ -70,6 +70,11 @@
                 .categories_list {
                     .categories-item {
                         @include flex(center, space-between);
+                        margin: 12px 24px 12px 0;
+
+                        .tag-item {
+                            margin: 0;
+                        }
                     }
                 }
 
@@ -87,13 +92,22 @@
 
                 .rate_list {
                     .rate-item {
-                        @include flex(flex-start, none);
+                        @include flex(center, none);
 
                         label {
+                            margin-right: 12px;
+
                             .input {
                                 padding: 0;
+
+                                input {
+                                    @include size(16px);
+
+                                }
                             }
                         }
+
+
                     }
                 }
             }

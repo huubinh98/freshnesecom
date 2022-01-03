@@ -3,10 +3,13 @@ import "./style.scss";
 import { IconWishlist } from "../Icon";
 import { IconCompare } from "../Icon";
 import { IconClose } from "../Icon";
-import { IconRating } from "../Icon";
 import Button from "../Button";
+import { Rating } from "@mui/material";
 
 export default function ProductCart() {
+
+  const [value, setValue] = React.useState(4);
+
   return (
     <div className="product__cart">
       <div className="product__cart-left">
@@ -42,16 +45,18 @@ export default function ProductCart() {
           </div>
         </div>
         <div className="rating">
-          <IconRating />
-          <IconRating />
-          <IconRating />
-          <IconRating />
-          <IconRating />
+          <Rating
+            name="simple-controlled"
+            value={value}
+            onChange={(event, newValue) => {
+              setValue(newValue);
+            }}
+          />
         </div>
         <div className="price__item">
           <div className="price">
             <p className="price__discount">52 USD</p>
-            <p className="price__main">100</p>
+            <p className="price__main">100 USD</p>
           </div>
           <div className="option">
             <Button>Buy now</Button>

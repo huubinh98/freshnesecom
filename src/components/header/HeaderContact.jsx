@@ -1,11 +1,16 @@
 import React, { useContext } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
 
 export default function HeaderContact({ props, item }) {
   const { chat, phone, email } = props;
 
-  // const { name, login, setLogin } = useContext(AuthContext);
+  const dispatch = useDispatch();
+  const { user } = useSelector(state => state.auth);
+
+  
+
   return (
     <div className="header__contact">
       <ul className="header__contact-list">
@@ -17,6 +22,10 @@ export default function HeaderContact({ props, item }) {
         </li>
         <li className="header__contact-item">
           <span>{email}</span>
+        </li>
+
+        <li>
+
         </li>
       </ul>
       <ul className="header__contact-list">
@@ -31,7 +40,7 @@ export default function HeaderContact({ props, item }) {
           )}
         </li> */}
         <li className="header__contact-item">
-          <Link to="/blogpage">blog</Link>
+          <Link to="/blogpage">Blog</Link>
         </li>
         <li className="header__contact-item">
           <Link to="/blogpage">About us</Link>

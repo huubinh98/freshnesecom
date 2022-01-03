@@ -25,14 +25,16 @@ export default function CategoryMenu() {
           <Link to={"/"}>Kitchen</Link>
         </li>
       </ul>
-      <Button
-        color="bright"
-        size="medium"
-        type="icon-right"
-        icon={<IconArowBtn />}
-      >
-        More Categories
-      </Button>
+      <Link to={"/categories"}>
+        <Button
+          color="bright"
+          size="medium"
+          type="icon-right"
+          icon={<IconArowBtn />}
+        >
+          More Categories
+        </Button>
+      </Link>
     </div>
   );
 }

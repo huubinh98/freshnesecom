@@ -5,7 +5,9 @@ label {
         @include text(var(--body12-fs), pb, var(--body12-lh), $black15, none);
         margin-bottom: 6px;
     }
+
     .input {
+        width: 100%;
         background-color: $bg-nav;
         border: 1px solid $d1;
         border-radius: var(--radius);
@@ -35,6 +37,7 @@ label {
             outline: none;
             background: transparent;
             text-align: left;
+            width: 100%;
 
             &::placeholder {
                 color: $gray-cl;
@@ -45,17 +48,20 @@ label {
             &-large {
                 max-width: 100%;
                 width: 100%;
+
                 input {
                     width: 100%;
                 }
             }
         }
+
         &.width {
             input {
                 width: 16px;
                 height: 16px;
             }
         }
+
         &.clear {
             background-color: transparent;
             border: none;
