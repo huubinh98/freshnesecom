@@ -7,6 +7,8 @@ const regexPhone = /(84|0[3|5|7|8|9])+([0-9]{8})\b/;
 
 const regexZip = /^[1-9][0-9][0-9][0-9][0-9][0-9]?$|^100$/;
 
+const creditCard = /^(5[1-5][0-9]{14}|2(22[1-9][0-9]{12}|2[3-9][0-9]{13}|[3-6][0-9]{14}|7[0-1][0-9]{13}|720[0-9]{12}))$/;
+
 export default function useForm(initialValue, err) {
   const [form, setForm] = useState(initialValue);
   const [error, setError] = useState({ err });
@@ -63,6 +65,17 @@ export default function useForm(initialValue, err) {
     } else if (!regexZip.test(form.zip)) {
       errObj.zip = "This field must be number";
     }
+
+    if (!form.cardNumber) {
+      errObj.zip = "Please enter your card number";
+    } else if (!creditCard.test(form.cardNumber)) {
+      errObj.zip = "Please enter valid card number";
+    }
+
+    if (!form.expireDate) {
+      errObj.zip = "Please enter your expire date";
+    } 
+
     setError(errObj);
 
     return errObj;
@@ -76,18 +89,18 @@ export default function useForm(initialValue, err) {
     }
   };
 
-  const [errOption, setErrOtion] = useState({});
+  const [errOption, setErrOption] = useState({});
 
   const handleSubmitOption = (e) => {
-      e.preventDefault();
+    e.preventDefault();
 
-      let errObj = {};
-      if (!selectedOption) {
-          errObj.catchErr = 'Please choose an option'
-      }
-      setErrOtion(errObj)
+    let errObj = {};
+    if (!selectedOption) {
+      errObj.catchErr = 'Please choose an option'
+    }
+    setErrOption(errObj)
   }
-  
+
   return {
     handleSubmit,
     register,

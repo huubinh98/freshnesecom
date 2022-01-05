@@ -13,7 +13,7 @@ const Payment = () => {
 
     const { selectedOption, setSelectedOption, handleSubmitOption, errOption } = useForm(
         {
-            
+
         }
     )
 

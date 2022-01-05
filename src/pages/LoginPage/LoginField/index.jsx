@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import authService from "../../../service/authService";
 import "./style.scss";
 
 const Login = () => {
@@ -12,6 +13,7 @@ const Login = () => {
   };
 
   const [err, setErr] = useState();
+  // const [data, setData] = useState();
 
   const handleSubmit = () => {
     let errObj = {};
@@ -21,8 +23,10 @@ const Login = () => {
     if (!formLogin.password) {
       errObj.password = "*Please enter your password";
     }
-
     setErr(errObj);
+    if (Object.keys(errObj).length === 0) {
+      let res = authService.login();
+    }
   };
 
   return (
