@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import authService from "../../../service/authService";
 
 const emailRegex =
   /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -6,8 +8,8 @@ const emailRegex =
 
 const Register = () => {
   const [formRegis, setFormRegis] = useState({
-    usename: "",
-    email: "",
+    name: "",
+    username: "",
     password: "",
   });
 
@@ -16,19 +18,20 @@ const Register = () => {
   };
 
   const [err, setErr] = useState();
+  const dispatch = useDispatch()
 
   const handleSubmit = () => {
     let errObj = {};
 
-    if (!formRegis.usename) {
-      errObj.usename = "*Please enter your username";
-    } else if (formRegis.usename.length < 2) {
-      errObj.usename = "*Username must contain more than 2 characters";
+    if (!formRegis.name) {
+      errObj.name = "*Please enter your name";
+    } else if (formRegis.name.length < 2) {
+      errObj.name = "*name must contain more than 2 characters";
     }
-    if (!formRegis.email) {
-      errObj.email = "*Please enter your email";
-    } else if (!emailRegex.test(formRegis.email)) {
-      errObj.email = "*Please enter email";
+    if (!formRegis.username) {
+      errObj.username = "*Please enter your username";
+    } else if (!emailRegex.test(formRegis.username)) {
+      errObj.username = "*this field must be an email";
     }
     if (!formRegis.password) {
       errObj.password = "*Please enter password";
@@ -38,8 +41,19 @@ const Register = () => {
     ) {
       errObj.password = "*Password must contain 8 - 32 characters";
     }
+
+    if (Object.keys(errObj).length === 0) {
+      const token = authService.register(formRegis)
+      if (token?.message) {
+        return alert(token.message)
+      }
+      dispatch({
+        type: 'REGIS',
+        payload: formRegis
+      })
+    }
     setErr(errObj);
-    console.log(formRegis.password.length);
+    console.log(formRegis);
   };
 
   return (
@@ -49,19 +63,19 @@ const Register = () => {
         Sign up
       </label>
       <input
-        onChange={handleChange("usename")}
-        value={formRegis.usename}
+        onChange={handleChange("name")}
+        value={formRegis.name}
         type="text"
         placeholder="User name"
       />
-      {err && <p>{err.usename}</p>}
+      {err && <p>{err.name}</p>}
       <input
-        onChange={handleChange("email")}
-        value={formRegis.email}
+        onChange={handleChange("username")}
+        value={formRegis.username}
         type="text"
         placeholder="Email"
       />
-      {err && <p>{err.email}</p>}
+      {err && <p>{err.username}</p>}
       <input
         onChange={handleChange("password")}
         value={formRegis.password}
