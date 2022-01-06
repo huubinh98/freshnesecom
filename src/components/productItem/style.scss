@@ -18,6 +18,13 @@
             @include midimg(100%);
             @include transition($t);
         }
+
+        .tag-item {
+            position: absolute;
+            top: 5%;
+            left: 5%;
+            z-index: 1
+        }
     }
 
     &-content {
@@ -31,6 +38,10 @@
         .desc {
             @include text(var(--body12-fs), os, var(--body12-lh), $desc-cl, none);
             margin-bottom: 16px;
+        }
+
+        .rating {
+            margin-bottom: 14px;
         }
 
         .content-button {
@@ -54,6 +65,16 @@
         .pro__item-img {
             img {
                 @include transform(scale(1.1) translate(-50%, -50%));
+            }
+        }
+    }
+
+    &.star {
+        &-none {
+            .pro__item-content {
+                .rating {
+                    display: none;
+                }
             }
         }
     }

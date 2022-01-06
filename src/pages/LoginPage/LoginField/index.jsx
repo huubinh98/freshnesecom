@@ -1,10 +1,11 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
 import authService from "../../../service/authService";
 import "./style.scss";
 
 const Login = () => {
   const [formLogin, setFormLogin] = useState({
-    usename: "",
+    username: "",
     password: "",
   });
 
@@ -13,20 +14,30 @@ const Login = () => {
   };
 
   const [err, setErr] = useState();
+  const dispatch = useDispatch()
   // const [data, setData] = useState();
 
   const handleSubmit = () => {
     let errObj = {};
-    if (!formLogin.usename) {
-      errObj.usename = "*Please enter your usename";
+    if (!formLogin.username) {
+      errObj.username = "*Please enter your username";
     }
     if (!formLogin.password) {
       errObj.password = "*Please enter your password";
     }
     setErr(errObj);
     if (Object.keys(errObj).length === 0) {
-      let res = authService.login();
+      const token = authService.login(formLogin);
+      if (token?.message) {
+        return alert(token.message)
+      }
+      dispatch({
+        type: 'LOGIN',
+        payload: formLogin
+      })
     }
+
+    console.log(formLogin)
   };
 
   return (
@@ -36,12 +47,12 @@ const Login = () => {
         Login
       </label>
       <input
-        onChange={handleChange("usename")}
-        value={formLogin.usename}
+        onChange={handleChange("username")}
+        value={formLogin.username}
         type="email"
         placeholder="Email"
       />
-      {err && <p>{err.usename}</p>}
+      {err && <p>{err.username}</p>}
       <input
         onChange={handleChange("password")}
         value={formLogin.password}

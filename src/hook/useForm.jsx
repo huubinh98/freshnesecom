@@ -7,7 +7,9 @@ const regexPhone = /(84|0[3|5|7|8|9])+([0-9]{8})\b/;
 
 const regexZip = /^[1-9][0-9][0-9][0-9][0-9][0-9]?$|^100$/;
 
-const creditCard = /^(5[1-5][0-9]{14}|2(22[1-9][0-9]{12}|2[3-9][0-9]{13}|[3-6][0-9]{14}|7[0-1][0-9]{13}|720[0-9]{12}))$/;
+const regexCreditCard = /^(5[1-5][0-9]{14}|2(22[1-9][0-9]{12}|2[3-9][0-9]{13}|[3-6][0-9]{14}|7[0-1][0-9]{13}|720[0-9]{12}))$/;
+
+const regexExpireDate = /^(0[1-9]|1[0-2])\/?([0-9]{4}|[0-9]{2})$/;
 
 export default function useForm(initialValue, err) {
   const [form, setForm] = useState(initialValue);
@@ -67,14 +69,16 @@ export default function useForm(initialValue, err) {
     }
 
     if (!form.cardNumber) {
-      errObj.zip = "Please enter your card number";
-    } else if (!creditCard.test(form.cardNumber)) {
-      errObj.zip = "Please enter valid card number";
+      errObj.cardNumber = "Please enter your card number";
+    } else if (!regexCreditCard.test(form.cardNumber)) {
+      errObj.cardNumber = "Please enter valid card number";
     }
 
     if (!form.expireDate) {
-      errObj.zip = "Please enter your expire date";
-    } 
+      errObj.expireDate = "Please enter your expire date";
+    } else if (!regexExpireDate.test(form.expireDate)) {
+      errObj.expireDate = "Please enter your ";
+    }
 
     setError(errObj);
 
@@ -91,12 +95,17 @@ export default function useForm(initialValue, err) {
 
   const [errOption, setErrOption] = useState({});
 
-  const handleSubmitOption = (e) => {
+  const handleSubmitOption = (callbackFunc) => (e) => {
     e.preventDefault();
 
     let errObj = {};
+    let errInfoObj = validate();
     if (!selectedOption) {
       errObj.catchErr = 'Please choose an option'
+    }
+
+    if (Object.keys(errInfoObj).length === 0) {
+      callbackFunc(form);
     }
     setErrOption(errObj)
   }
