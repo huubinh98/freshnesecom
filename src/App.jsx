@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import { Route, Routes } from "react-router-dom";
 import HomePage from "./pages/Homepage";
@@ -10,7 +10,7 @@ import LoginPage from "./pages/LoginPage";
 import BlogPage from "./pages/BlogPage";
 import { AuthProvider } from "./context/AuthContext";
 import CategoriesPage from "./pages/CategoriesPage";
-import { Provider } from "react-redux";
+import { Provider, useSelector } from "react-redux";
 import store from "./store";
 
 function App() {

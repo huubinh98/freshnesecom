@@ -8,7 +8,7 @@ export function IconArowBtn() {
         width={16}
         height={16}
         viewBox="0 0 16 16"
-        fill="none"
+        fill="currentColor"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -70,14 +70,14 @@ export function IconAccount() {
       >
         <path
           d="M3 21.9999L3.79 19.1199C6.4 9.6199 17.6 9.6199 20.21 19.1199L21 21.9999"
-          stroke="#151515"
+          stroke="currentColor"
           strokeWidth="2.5"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
         <path
           d="M12 11.98C14.7614 11.98 17 9.74141 17 6.97998C17 4.21856 14.7614 1.97998 12 1.97998C9.23858 1.97998 7 4.21856 7 6.97998C7 9.74141 9.23858 11.98 12 11.98Z"
-          stroke="#151515"
+          stroke="currentColor"
           strokeWidth="2.5"
           strokeLinecap="round"
           strokeLinejoin="bevel"
@@ -121,14 +121,14 @@ export function IconSearch() {
       >
         <path
           d="M9.19303 11.4333C11.7704 11.4333 13.8597 9.34394 13.8597 6.76661C13.8597 4.18928 11.7704 2.09995 9.19303 2.09995C6.61571 2.09995 4.52637 4.18928 4.52637 6.76661C4.52637 9.34394 6.61571 11.4333 9.19303 11.4333Z"
-          stroke="#151515"
+          stroke="currentColor"
           strokeWidth="1.5"
           strokeLinecap="round"
           strokeLinejoin="bevel"
         />
         <path
           d="M5.81319 10.24L2.68652 13.3667"
-          stroke="#151515"
+          stroke="currentColor"
           strokeWidth="1.5"
           strokeLinecap="round"
           strokeLinejoin="bevel"
@@ -274,10 +274,34 @@ export function IconSwitch() {
 export function IconGrid() {
   return (
     <i>
-      <svg width={40} height={40} viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M33.3333 3.3335H6.66659C4.82564 3.3335 3.33325 4.82588 3.33325 6.66683V33.3335C3.33325 35.1744 4.82564 36.6668 6.66659 36.6668H33.3333C35.1742 36.6668 36.6666 35.1744 36.6666 33.3335V6.66683C36.6666 4.82588 35.1742 3.3335 33.3333 3.3335Z" stroke="#151515" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-        <path d="M3.33325 20H36.6666" stroke="#151515" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-        <path d="M20 3.3335V36.6668" stroke="#151515" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+      <svg
+        width={40}
+        height={40}
+        viewBox="0 0 40 40"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M33.3333 3.3335H6.66659C4.82564 3.3335 3.33325 4.82588 3.33325 6.66683V33.3335C3.33325 35.1744 4.82564 36.6668 6.66659 36.6668H33.3333C35.1742 36.6668 36.6666 35.1744 36.6666 33.3335V6.66683C36.6666 4.82588 35.1742 3.3335 33.3333 3.3335Z"
+          stroke="#151515"
+          strokeWidth="2.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M3.33325 20H36.6666"
+          stroke="#151515"
+          strokeWidth="2.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M20 3.3335V36.6668"
+          stroke="#151515"
+          strokeWidth="2.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
       </svg>
     </i>
   );
@@ -286,11 +310,41 @@ export function IconGrid() {
 export function IconList() {
   return (
     <i>
-      <svg width={40} height={40} viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M33.3333 3.3335H6.66659C4.82564 3.3335 3.33325 4.82588 3.33325 6.66683V33.3335C3.33325 35.1744 4.82564 36.6668 6.66659 36.6668H33.3333C35.1742 36.6668 36.6666 35.1744 36.6666 33.3335V6.66683C36.6666 4.82588 35.1742 3.3335 33.3333 3.3335Z" stroke="#151515" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-        <path d="M3.33325 11.667H36.6666" stroke="#151515" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-        <path d="M3.33325 20H36.6666" stroke="#151515" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-        <path d="M3.33325 28.3335H36.6666" stroke="#151515" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+      <svg
+        width={40}
+        height={40}
+        viewBox="0 0 40 40"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M33.3333 3.3335H6.66659C4.82564 3.3335 3.33325 4.82588 3.33325 6.66683V33.3335C3.33325 35.1744 4.82564 36.6668 6.66659 36.6668H33.3333C35.1742 36.6668 36.6666 35.1744 36.6666 33.3335V6.66683C36.6666 4.82588 35.1742 3.3335 33.3333 3.3335Z"
+          stroke="#151515"
+          strokeWidth="2.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M3.33325 11.667H36.6666"
+          stroke="#151515"
+          strokeWidth="2.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M3.33325 20H36.6666"
+          stroke="#151515"
+          strokeWidth="2.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M3.33325 28.3335H36.6666"
+          stroke="#151515"
+          strokeWidth="2.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
       </svg>
     </i>
   );
@@ -601,9 +655,27 @@ export function BitcoinLogo() {
 export function Security() {
   return (
     <i>
-      <svg width={32} height={32} viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M25.053 5.96007C24.1585 6.01119 23.2612 5.93941 22.3863 5.74674C21.3309 5.38534 20.3438 4.84897 19.4663 4.16007C18.7156 3.62793 18.0028 3.0443 17.333 2.41341C17.049 2.14815 16.6749 2.00061 16.2863 2.00061C15.8977 2.00061 15.5236 2.14815 15.2396 2.41341C14.5876 3.02435 13.9021 3.59857 13.1863 4.13341C12.3034 4.83136 11.3126 5.38079 10.253 5.76007C9.25634 5.98526 8.23255 6.06608 7.21295 6.00007C6.37809 5.9655 5.54574 5.88538 4.71962 5.76007C4.51775 5.73015 4.31191 5.74118 4.1144 5.79251C3.91688 5.84384 3.73172 5.93442 3.56996 6.05885C3.40821 6.18328 3.27316 6.33901 3.17288 6.51675C3.0726 6.6945 3.00914 6.89061 2.98629 7.09341C2.91962 7.73341 2.74629 9.40007 2.66629 11.2534C2.55417 13.1051 2.67061 14.9635 3.01295 16.7867C3.97834 19.8074 5.75388 22.5053 8.14629 24.5867C10.0479 26.3804 12.1098 27.9961 14.3063 29.4134C14.8949 29.8176 15.5922 30.0339 16.3063 30.0339C17.0203 30.0339 17.7176 29.8176 18.3063 29.4134C20.3863 27.9591 22.3318 26.3215 24.1196 24.5201C26.372 22.4234 28.04 19.7766 28.9596 16.8401" stroke="#151515" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-        <path d="M14.666 14.6667L18.4793 18.48C18.5031 18.5059 18.5319 18.5265 18.5641 18.5406C18.5962 18.5548 18.6309 18.5621 18.666 18.5621C18.7011 18.5621 18.7358 18.5548 18.768 18.5406C18.8001 18.5265 18.829 18.5059 18.8527 18.48L29.3327 8" stroke="#6A983C" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+      <svg
+        width={32}
+        height={32}
+        viewBox="0 0 32 32"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M25.053 5.96007C24.1585 6.01119 23.2612 5.93941 22.3863 5.74674C21.3309 5.38534 20.3438 4.84897 19.4663 4.16007C18.7156 3.62793 18.0028 3.0443 17.333 2.41341C17.049 2.14815 16.6749 2.00061 16.2863 2.00061C15.8977 2.00061 15.5236 2.14815 15.2396 2.41341C14.5876 3.02435 13.9021 3.59857 13.1863 4.13341C12.3034 4.83136 11.3126 5.38079 10.253 5.76007C9.25634 5.98526 8.23255 6.06608 7.21295 6.00007C6.37809 5.9655 5.54574 5.88538 4.71962 5.76007C4.51775 5.73015 4.31191 5.74118 4.1144 5.79251C3.91688 5.84384 3.73172 5.93442 3.56996 6.05885C3.40821 6.18328 3.27316 6.33901 3.17288 6.51675C3.0726 6.6945 3.00914 6.89061 2.98629 7.09341C2.91962 7.73341 2.74629 9.40007 2.66629 11.2534C2.55417 13.1051 2.67061 14.9635 3.01295 16.7867C3.97834 19.8074 5.75388 22.5053 8.14629 24.5867C10.0479 26.3804 12.1098 27.9961 14.3063 29.4134C14.8949 29.8176 15.5922 30.0339 16.3063 30.0339C17.0203 30.0339 17.7176 29.8176 18.3063 29.4134C20.3863 27.9591 22.3318 26.3215 24.1196 24.5201C26.372 22.4234 28.04 19.7766 28.9596 16.8401"
+          stroke="#151515"
+          strokeWidth="2.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M14.666 14.6667L18.4793 18.48C18.5031 18.5059 18.5319 18.5265 18.5641 18.5406C18.5962 18.5548 18.6309 18.5621 18.666 18.5621C18.7011 18.5621 18.7358 18.5548 18.768 18.5406C18.8001 18.5265 18.829 18.5059 18.8527 18.48L29.3327 8"
+          stroke="#6A983C"
+          strokeWidth="2.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
       </svg>
     </i>
   );
