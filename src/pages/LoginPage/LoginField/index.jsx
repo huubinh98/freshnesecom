@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import authService from "../../../service/authService";
+import { message } from "antd";
 import "./style.scss";
 
 const Login = () => {
@@ -14,10 +15,15 @@ const Login = () => {
   };
 
   const [err, setErr] = useState();
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   // const [data, setData] = useState();
+  const { login } = useSelector((store) => store.auth);
 
-  const handleSubmit = () => {
+  const onClose = () => {
+    message.destroy();
+  };
+
+  const handleSubmit = async () => {
     let errObj = {};
     if (!formLogin.username) {
       errObj.username = "*Please enter your username";
@@ -27,17 +33,26 @@ const Login = () => {
     }
     setErr(errObj);
     if (Object.keys(errObj).length === 0) {
-      const token = authService.login(formLogin);
-      if (token?.message) {
-        return alert(token.message)
+      try {
+        const res = await authService.login(formLogin);
+        console.log(`res`, res);
+        if (res?.message) {
+          throw res.message;
+        } else {
+          const token = res?.data;
+          if (token) {
+            dispatch({
+              type: "LOGIN",
+              payload: token,
+            });
+          }
+        }
+      } catch (error) {
+        message.warning(error, 2, onClose);
       }
-      dispatch({
-        type: 'LOGIN',
-        payload: formLogin
-      })
+      //call API
+      // dispatch
     }
-
-    console.log(formLogin)
   };
 
   return (

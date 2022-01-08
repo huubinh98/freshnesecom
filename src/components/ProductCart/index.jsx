@@ -7,7 +7,6 @@ import Button from "../Button";
 import { Rating } from "@mui/material";
 
 export default function ProductCart() {
-
   const [value, setValue] = React.useState(4);
 
   return (
