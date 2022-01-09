@@ -1,24 +1,22 @@
-
-const user = JSON.parse(localStorage.getItem('login'));
+const login = JSON.parse(localStorage.getItem('token'));
 
 const initialState = {
-    login: !!user,
-    user
+    login: !!login,
 }
 
 const authenReducer = (state = initialState, action) => {
 
     switch (action.type) {
         case 'LOGIN':
-            localStorage.setItem('login', JSON.stringify(action.payload))
+            const token = action.payload
+            localStorage.setItem('token', JSON.stringify(token))
             return {
-                login: true,
-                user: action.payload
+                login: !!token,
+                user: token
             }
-
         case 'REGIS':
             return {
-                user: action.payload
+                user: token
             }
         case 'LOGOUT':
             localStorage.removeItem('login')

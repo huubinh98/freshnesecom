@@ -1,7 +1,10 @@
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import authService from "../../../service/authService";
 import "./style.scss";
+import { message } from 'antd';
+import 'antd/dist/antd.css';
+import { Navigate } from "react-router-dom";
 
 const Login = () => {
   const [formLogin, setFormLogin] = useState({
@@ -9,15 +12,20 @@ const Login = () => {
     password: "",
   });
 
+  const [err, setErr] = useState();
+  const dispatch = useDispatch();
+
   const handleChange = (name) => (e) => {
     setFormLogin({ ...formLogin, [name]: e.target.value });
   };
+  
+  const { login } = useSelector(store => store.auth)
 
-  const [err, setErr] = useState();
-  const dispatch = useDispatch()
-  // const [data, setData] = useState();
+  if(login) {
+    return <Navigate to='/'/>
+  };
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => { 
     let errObj = {};
     if (!formLogin.username) {
       errObj.username = "*Please enter your username";
@@ -27,17 +35,15 @@ const Login = () => {
     }
     setErr(errObj);
     if (Object.keys(errObj).length === 0) {
-      const token = authService.login(formLogin);
+      const token = await authService.login(formLogin);
       if (token?.message) {
-        return alert(token.message)
+        return message.error(token.message);
       }
       dispatch({
         type: 'LOGIN',
-        payload: formLogin
+        payload: token
       })
     }
-
-    console.log(formLogin)
   };
 
   return (
