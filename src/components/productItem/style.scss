@@ -1,7 +1,7 @@
 @import "../../assets/css/style.scss";
 
 .pro__item {
-    width: 270px;
+    width: 268px;
     padding: 16px;
     overflow: hidden;
     border: 1px solid $d1;
@@ -33,6 +33,7 @@
         .title {
             @include text(var(--h4-fs), p, var(--h4-lh), $black15, none);
             margin-bottom: 4px;
+            @include overtext(2);
         }
 
         .desc {

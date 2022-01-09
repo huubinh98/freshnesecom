@@ -4,6 +4,9 @@ import authService from "../../../service/authService";
 import { message } from "antd";
 import "./style.scss";
 
+const emailRegexp =
+  /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
 const Login = () => {
   const [formLogin, setFormLogin] = useState({
     username: "",
@@ -17,7 +20,7 @@ const Login = () => {
   const [err, setErr] = useState();
   const dispatch = useDispatch();
   // const [data, setData] = useState();
-  const { login } = useSelector((store) => store.auth);
+  // const { login } = useSelector((store) => store.auth);
 
   const onClose = () => {
     message.destroy();
@@ -27,15 +30,22 @@ const Login = () => {
     let errObj = {};
     if (!formLogin.username) {
       errObj.username = "*Please enter your username";
+    } else if (!emailRegexp.test(formLogin.username)) {
+      errObj.username = "Username phai la Email";
     }
+
     if (!formLogin.password) {
       errObj.password = "*Please enter your password";
+    } else if (
+      formLogin.password.length < 6 ||
+      formLogin.password.length > 32
+    ) {
+      errObj.password = "Password phai tu 6-32 ky tu";
     }
     setErr(errObj);
     if (Object.keys(errObj).length === 0) {
       try {
         const res = await authService.login(formLogin);
-        console.log(`res`, res);
         if (res?.message) {
           throw res.message;
         } else {
