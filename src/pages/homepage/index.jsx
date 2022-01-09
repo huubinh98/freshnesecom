@@ -1,5 +1,6 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import productService from "../../service/productService";
 import userService from "../../service/userService";
 import Banner from "./Banner/Banner";
 import BestProduct from "./BestProduct/BestProduct";
@@ -10,6 +11,7 @@ import "./style.scss";
 
 export default function HomePage() {
   const { loginStatus } = useSelector((state) => state.auth);
+  // const [getProduct, setGetProduct] = useState();
   const dispatch = useDispatch();
   useEffect(() => {
     if (loginStatus) {
@@ -28,26 +30,33 @@ export default function HomePage() {
     }
   };
 
+  // useEffect(() => {
+  //   (async () => {
+  //     const resPro = await productService.getProduct();
+  //     setGetProduct(resPro?.data);
+  //   })();
+  // }, []);
+
   return (
     <main className="home__wrapper">
-      <section className="category__banner">
+      <section className="home__content">
         <div className="container">
-          <CategoryMenu />
+          <CategoryMenu isBanner />
           <Banner />
         </div>
       </section>
-      <section className="category__product">
+      <section className="home__content">
         <div className="container">
           <CategoryMenu />
           <BestProduct />
         </div>
       </section>
-      <section className="category__product">
+      {/* <section className="category__product">
         <div className="container">
           <CategoryMenu />
           <BestProduct />
         </div>
-      </section>
+      </section> */}
       <CustomerQuote />
       <BlogPost />
     </main>
