@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import authService from "../../../service/authService";
+import { message } from 'antd';
+import 'antd/dist/antd.css';
+
 
 const emailRegex =
   /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -20,7 +23,7 @@ const Register = () => {
   const [err, setErr] = useState();
   const dispatch = useDispatch()
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     let errObj = {};
 
     if (!formRegis.name) {
@@ -41,19 +44,36 @@ const Register = () => {
     ) {
       errObj.password = "*Password must contain 8 - 32 characters";
     }
-
-    if (Object.keys(errObj).length === 0) {
-      const token = authService.register(formRegis)
-      if (token?.message) {
-        return alert(token.message)
-      }
-      dispatch({
-        type: 'REGIS',
-        payload: formRegis
-      })
-    }
     setErr(errObj);
-    console.log(formRegis);
+
+    // if (Object.keys(errObj).length === 0) {
+    //   const res = await authService.register(formRegis)
+    //   if (res?.message) {
+    //     return message.error(res.message);
+    //   }
+    //   dispatch({
+    //     type: 'REGIS',
+    //     payload: 
+    //   })
+    // }
+    if (Object.keys(errObj).length === 0) {
+      try {
+        const res = await authService.register(formRegis)
+        if (res?.error) {
+          throw res.error;
+        } else {
+          const token = res?.data;
+          if (token) {
+            dispatch({
+              type: 'REGIS',
+              payload: token,
+            })
+          }
+        }
+      } catch (err) {
+        message.error(err);
+      }
+    }
   };
 
   return (

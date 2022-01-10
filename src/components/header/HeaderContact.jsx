@@ -1,15 +1,17 @@
-import React, { useContext } from "react";
+import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { AuthContext } from "../../context/AuthContext";
+// import { AuthContext } from "../../context/AuthContext";
 
 export default function HeaderContact({ props, item }) {
   const { chat, phone, email } = props;
-
+  const { userInfo } = useSelector((state) => state.user);
   const dispatch = useDispatch();
-  const { user } = useSelector(state => state.auth);
+  // const { user } = useSelector(state => state.auth);
 
-  
+  const handleLogout = async () => {
+    
+  }
 
   return (
     <div className="header__contact">
@@ -22,10 +24,6 @@ export default function HeaderContact({ props, item }) {
         </li>
         <li className="header__contact-item">
           <span>{email}</span>
-        </li>
-
-        <li>
-
         </li>
       </ul>
       <ul className="header__contact-list">
@@ -50,6 +48,14 @@ export default function HeaderContact({ props, item }) {
         </li>
         <li className="header__contact-item">
           <Link to="/checkoutpage">Checkout</Link>
+        </li>
+        <li className="header__contact-item">
+          {userInfo.name &&
+            <>
+              <p>{userInfo.name}</p>
+              <button onClick={handleLogout}>Logout</button>
+            </>
+          }
         </li>
       </ul>
     </div>

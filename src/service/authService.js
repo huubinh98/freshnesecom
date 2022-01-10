@@ -20,7 +20,13 @@ const authService = {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(data)
-        }).then(res => res.json()).then(res => console.log(res))
+        }).then(res => res.json())
+    },
+
+    refreshToken() {
+        return fetch(`${API}/refresh-token`, {
+            method: 'POST',
+        })
     }
 
 }

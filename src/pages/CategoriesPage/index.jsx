@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { IconList } from '../../components/Icon'
 import { IconGrid } from '../../components/Icon'
 import Input from '../../components/Input'
@@ -6,8 +6,19 @@ import ProductItem from '../../components/ProductItem'
 import Tags from '../../components/Tags'
 import './style.scss'
 import Rating from '@mui/material/Rating';
+import productService from '../../service/productService'
 
 const CategoriesPage = () => {
+
+    const [getProduct, setGetProduct] = useState([]);
+    useEffect(() => {
+        (async () => {
+            const resPro = await productService.getProduct();
+            const dataPro = resPro?.data;
+            setGetProduct(dataPro);
+        })();
+    }, []);
+
     return (
         <div className="categoriesPage">
             <div className="container">
@@ -113,10 +124,10 @@ const CategoriesPage = () => {
 
                     </div>
                     <div className="categories_content-product">
-                        <ProductItem />
+                        <ProductItem productCart={getProduct} />
                     </div>
                 </div>
-                
+
             </div>
 
         </div>
