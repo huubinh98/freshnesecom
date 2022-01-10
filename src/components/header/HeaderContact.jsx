@@ -5,11 +5,11 @@ import { AuthContext } from "../../context/AuthContext";
 
 export default function HeaderContact({ props, item }) {
   const { chat, phone, email } = props;
+  const { userInfo } = useSelector((state) => state.user);
+  // const dispatch = useDispatch();
+  // const { user } = useSelector(state => state.auth);
 
-  const dispatch = useDispatch();
-  const { user } = useSelector(state => state.auth);
 
-  
 
   return (
     <div className="header__contact">
@@ -50,6 +50,14 @@ export default function HeaderContact({ props, item }) {
         </li>
         <li className="header__contact-item">
           <Link to="/checkoutpage">Checkout</Link>
+        </li>
+        <li className="header__contact-item">
+          {userInfo.name &&
+            <>
+              <p>{userInfo.name}</p>
+              <button>Logout</button>
+            </>
+          }
         </li>
       </ul>
     </div>

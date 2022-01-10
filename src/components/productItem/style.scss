@@ -11,12 +11,17 @@
         position: relative;
         overflow: hidden;
         height: 0;
-        padding-bottom: 76.3%;
+        padding-bottom: 77%;
         border-radius: var(--radius);
 
         img {
-            @include midimg(100%);
-            // @include transform(translate(10%, -20%));
+            // @include midimg(100%);
+            // @include transition($t);
+            outline: 0;
+            @include size(100%);
+            object-fit: contain;
+            @include mid;
+            @include transform(translate(-50%, -50%));
             @include transition($t);
         }
 
@@ -67,7 +72,7 @@
         .pro__item-img {
             img {
                 // @include transform(scale(1.1) translate(10%, -10%));
-                @include transform(scale(1.1) translate(-50%, -50%));
+                @include transform(scale(1.1) translate(-45%, -45%));
             }
         }
     }
