@@ -3,7 +3,6 @@ import {
 } from "../constant/api"
 
 const authService = {
-    
     login(data) {
         return fetch(`${API}/login`, {
             method: 'POST',
@@ -21,7 +20,7 @@ const authService = {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(data)
-        }).then(res => res.json()).then(res => console.log(res))
+        }).then(res => res.json())
     },
 
     refreshToken() {

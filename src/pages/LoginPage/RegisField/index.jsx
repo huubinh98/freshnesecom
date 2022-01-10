@@ -44,19 +44,36 @@ const Register = () => {
     ) {
       errObj.password = "*Password must contain 8 - 32 characters";
     }
-
-    if (Object.keys(errObj).length === 0) {
-      const token = await authService.register(formRegis)
-      if (token?.message) {
-        return message.error(token.message);
-      }
-      dispatch({
-        type: 'REGIS',
-        payload: token
-      })
-    }
     setErr(errObj);
-    console.log(formRegis);
+
+    // if (Object.keys(errObj).length === 0) {
+    //   const res = await authService.register(formRegis)
+    //   if (res?.message) {
+    //     return message.error(res.message);
+    //   }
+    //   dispatch({
+    //     type: 'REGIS',
+    //     payload: 
+    //   })
+    // }
+    if (Object.keys(errObj).length === 0) {
+      try {
+        const res = await authService.register(formRegis)
+        if (res?.error) {
+          throw res.error;
+        } else {
+          const token = res?.data;
+          if (token) {
+            dispatch({
+              type: 'REGIS',
+              payload: token,
+            })
+          }
+        }
+      } catch (err) {
+        message.error(err);
+      }
+    }
   };
 
   return (
