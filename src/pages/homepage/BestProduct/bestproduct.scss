@@ -3,4 +3,6 @@
 .pro__list {
     @include flex(flex-start, flex-start);
     gap: 32px;
+    flex-wrap: wrap;
+    width: 100%;
 }

@@ -1,32 +1,35 @@
-const login = JSON.parse(localStorage.getItem('token'));
+const token = JSON.parse(localStorage.getItem("token"));
 
 const initialState = {
-    login: !!login,
-}
+    login: !!token,
+    loginStatus: false,
+};
 
 const authenReducer = (state = initialState, action) => {
-
-    switch (action.type) {
-        case 'LOGIN':
-            const token = action.payload
-            localStorage.setItem('token', JSON.stringify(token))
+    const { type, payload } = action;
+    switch (type) {
+        case "LOGIN":
+            // handle data
+            localStorage.setItem("token", JSON.stringify(payload));
+            //update state
             return {
                 login: !!token,
-                user: token
-            }
-        case 'REGIS':
+                loginStatus: true,
+            };
+
+        case "REGIS":
             return {
-                user: token
-            }
-        case 'LOGOUT':
-            localStorage.removeItem('login')
+                user: action.payload,
+            };
+        case "LOGOUT":
+            localStorage.removeItem("login");
             return {
                 login: false,
-                user: null
-            }
+                user: null,
+            };
         default:
-            return state
+            return state;
     }
-}
+};
 
-export default authenReducer
+export default authenReducer;

@@ -27,7 +27,6 @@ const authService = {
     refreshToken() {
         return fetch(`${API}/refresh-token`, {
             method: 'POST',
-            
         })
     }
 

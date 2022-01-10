@@ -1,7 +1,7 @@
 @import "../../assets/css/style.scss";
 
-    .category__banner {
-        @include flex(center, flex-start);
+    .home__content {
+        // @include flex(center, flex-start);
         padding: var(--pd-section);
         gap: 32px;
         .container {
@@ -11,23 +11,7 @@
         .cate {
             width: 270px;
         }
-        .banner {
-            flex: 1;
-        }
-    }
-
-    .category__product {
-        @include flex(center, flex-start);
-        padding: var(--pd-section);
-        gap: 32px;
-        .container {
-            display: flex;
-            gap: 32px;
-        }
-        .cate {
-            width: 270px;
-        }
-        .banner {
+        .banner, .pro__list {
             flex: 1;
         }
     }

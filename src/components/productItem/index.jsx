@@ -6,9 +6,9 @@ import "./style.scss";
 import Tags from "../Tags";
 import { Rating } from "@mui/material";
 import classNames from "classnames";
+import { numberWithCommas } from "../utils";
 
-export default function ProductItem({star = 'default'}) {
-  const { productCart } = data;
+export default function ProductItem({ star = "default", productCart = [] }) {
   return (
     <>
       {productCart.map((item) => {
@@ -16,19 +16,21 @@ export default function ProductItem({star = 'default'}) {
           <a href="#/" key={item.id}>
             <div className={classNames(`pro__item star-${star}`)}>
               <div className="pro__item-img">
-                <img src={item.image} alt="" />
-                <Tags itemTag='-35%' size='small' color='green'></Tags>
+                <img src={item?.images[0]?.thumbnail_url} alt="" />
+                <Tags itemTag="-35%" size="small" color="green"></Tags>
               </div>
               <div className="pro__item-content">
                 <h4 className="title">{item.name}</h4>
-                <p className=" desc">{item.description}</p>
+                {/* <p className=" desc">{item.description}</p> */}
                 <div className="rating">
                   <Rating name="read-only" value={4} readOnly />
                 </div>
                 <div className="content-button">
                   <div className="price">
-                    <p className="price__discount">{item.priceAccount} USD</p>
-                    <p className="price__main">{item.priceMain}</p>
+                    <p className="price__discount">
+                      {numberWithCommas(item.real_price)} vnd
+                    </p>
+                    <p className="price__main">{item.price}</p>
                   </div>
                   <Button>Buy now</Button>
                 </div>
