@@ -8,7 +8,6 @@ export default function Account() {
   return (
     <div>
       <Link to="/login">
-
         <div style={{ color: `${loginStatus ? "red" : "black"}` }}>
           <IconAccount />
         </div>

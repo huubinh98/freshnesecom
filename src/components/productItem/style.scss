@@ -71,7 +71,6 @@
     &:hover {
         .pro__item-img {
             img {
-                // @include transform(scale(1.1) translate(10%, -10%));
                 @include transform(scale(1.1) translate(-45%, -45%));
             }
         }
