@@ -3,8 +3,6 @@ import { useDispatch, useSelector } from "react-redux";
 import authService from "../../../service/authService";
 import { message } from "antd";
 import "./style.scss";
-import 'antd/dist/antd.css';
-import { Navigate } from "react-router-dom";
 
 const emailRegexp =
   /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -22,7 +20,7 @@ const Login = () => {
     setFormLogin({ ...formLogin, [name]: e.target.value });
   };
 
-  const { login } = useSelector(store => store.auth)
+  const { login } = useSelector((store) => store.auth);
   // const [data, setData] = useState();
   // const { login } = useSelector((store) => store.auth);
 
@@ -54,6 +52,8 @@ const Login = () => {
           throw res.message;
         } else {
           const token = res?.data;
+          // localStorage.setItem("token", JSON.stringify(token));
+          // const userInfo = await userService.getInfo();
           if (token) {
             dispatch({
               type: "LOGIN",

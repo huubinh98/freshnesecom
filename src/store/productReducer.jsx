@@ -10,6 +10,8 @@ const productReducer = (state = initialValue, action) => {
             }
     }
 
+    return state;
+
 }
 
 export default productReducer;
