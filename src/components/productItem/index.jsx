@@ -16,7 +16,7 @@ export default function ProductItem({ star = "default", productCart = [] }) {
           <a href="#/" key={item.id}>
             <div className={classNames(`pro__item star-${star}`)}>
               <div className="pro__item-img">
-                <img src={item?.images[0]?.thumbnail_url} alt="" />
+                <img src={item.thumbnail_url} alt="" />
                 <Tags itemTag="-35%" size="small" color="green"></Tags>
               </div>
               <div className="pro__item-content">

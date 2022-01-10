@@ -15,6 +15,7 @@ const authenReducer = (state = initialState, action) => {
       return {
         login: !!token,
         loginStatus: true,
+        // user: payload,
       };
 
     case "REGIS":
@@ -22,7 +23,7 @@ const authenReducer = (state = initialState, action) => {
         user: action.payload,
       };
     case "LOGOUT":
-      localStorage.removeItem("login");
+      localStorage.removeItem("token");
       return {
         login: false,
         user: null,

@@ -9,7 +9,7 @@ export default function Account() {
   return (
     <div>
       <Link to="/login">
-        {userInfo.name && <p>{userInfo.name}</p>}
+        {userInfo?.name && <p>{userInfo.name}</p>}
         <div style={{ color: `${loginStatus ? "red" : "black"}` }}>
           <IconAccount />
         </div>

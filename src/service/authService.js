@@ -25,8 +25,4 @@ const authService = {
 
 }
 
-function A() {  }
-
-A()
-
 export default authService
