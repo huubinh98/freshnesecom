@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import authService from "../../../service/authService";
+import { message } from 'antd';
+import 'antd/dist/antd.css';
+
 
 const emailRegex =
   /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -20,7 +23,7 @@ const Register = () => {
   const [err, setErr] = useState();
   const dispatch = useDispatch()
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     let errObj = {};
 
     if (!formRegis.name) {
@@ -43,13 +46,13 @@ const Register = () => {
     }
 
     if (Object.keys(errObj).length === 0) {
-      const token = authService.register(formRegis)
+      const token = await authService.register(formRegis)
       if (token?.message) {
-        return alert(token.message)
+        return message.error(token.message);
       }
       dispatch({
         type: 'REGIS',
-        payload: formRegis
+        payload: token
       })
     }
     setErr(errObj);

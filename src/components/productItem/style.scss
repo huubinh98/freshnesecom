@@ -8,11 +8,11 @@
     border-radius: var(--radius);
 
     &-img {
+        position: relative;
         overflow: hidden;
         height: 0;
         padding-bottom: 77%;
         border-radius: var(--radius);
-        position: relative;
 
         img {
             // @include midimg(100%);
@@ -21,7 +21,7 @@
             @include size(100%);
             object-fit: contain;
             @include mid;
-            @include transform(translate(-50%, -50%) scale(1));
+            @include transform(translate(-50%, -50%));
             @include transition($t);
         }
 
@@ -71,7 +71,8 @@
     &:hover {
         .pro__item-img {
             img {
-                @include transform(scale(1.1) translate(-50%, -50%));
+                // @include transform(scale(1.1) translate(10%, -10%));
+                @include transform(scale(1.1) translate(-45%, -45%));
             }
         }
     }
