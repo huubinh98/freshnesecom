@@ -3,6 +3,10 @@ import { useDispatch, useSelector } from "react-redux";
 import authService from "../../../service/authService";
 import { message } from "antd";
 import "./style.scss";
+<<<<<<< HEAD
+import 'antd/dist/antd.css';
+=======
+>>>>>>> master
 
 const emailRegexp =
   /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -20,9 +24,13 @@ const Login = () => {
     setFormLogin({ ...formLogin, [name]: e.target.value });
   };
 
+<<<<<<< HEAD
+  const { login } = useSelector(store => store.auth)
+=======
   const { login } = useSelector((store) => store.auth);
   // const [data, setData] = useState();
   // const { login } = useSelector((store) => store.auth);
+>>>>>>> master
 
   const onClose = () => {
     message.destroy();
@@ -90,7 +98,6 @@ const Login = () => {
       />
       {err && <p>{err.password}</p>}
       <button onClick={handleSubmit}>Login</button>
-      {/* </form> */}
     </div>
   );
 };
