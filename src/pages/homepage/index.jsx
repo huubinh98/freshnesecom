@@ -10,15 +10,15 @@ import CustomerQuote from "./CustomerQuote/CustomerQuote";
 import "./style.scss";
 
 export default function HomePage() {
-  const { loginStatus } = useSelector((state) => state.auth);
+  const { login } = useSelector((state) => state.auth);
   // const [getProduct, setGetProduct] = useState();
   const dispatch = useDispatch();
   useEffect(() => {
-    if (loginStatus) {
+    if (login) {
       getUser();
     }
     return () => {};
-  }, [loginStatus]);
+  }, [login]);
 
   const getUser = async () => {
     let res = await userService.getInfo();

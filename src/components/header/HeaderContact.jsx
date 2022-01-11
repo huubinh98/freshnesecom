@@ -6,12 +6,10 @@ import { Link } from "react-router-dom";
 export default function HeaderContact({ props, item }) {
   const { chat, phone, email } = props;
   const { userInfo } = useSelector((state) => state.user);
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
   // const { user } = useSelector(state => state.auth);
 
-  const handleLogout = async () => {
-    
-  }
+  const handleLogout = async () => {};
 
   return (
     <div className="header__contact">
@@ -50,12 +48,12 @@ export default function HeaderContact({ props, item }) {
           <Link to="/checkoutpage">Checkout</Link>
         </li>
         <li className="header__contact-item">
-          {userInfo.name &&
+          {userInfo?.name && (
             <>
               <p>{userInfo.name}</p>
               <button onClick={handleLogout}>Logout</button>
             </>
-          }
+          )}
         </li>
       </ul>
     </div>

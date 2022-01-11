@@ -2,7 +2,7 @@ const token = JSON.parse(localStorage.getItem("token"));
 
 const initialState = {
   login: !!token,
-  loginStatus: false,
+  // loginStatus: false,
 };
 
 const authenReducer = (state = initialState, action) => {
@@ -13,8 +13,7 @@ const authenReducer = (state = initialState, action) => {
       localStorage.setItem("token", JSON.stringify(payload));
       //update state
       return {
-        login: !!token,
-        loginStatus: true,
+        login: true,
         // user: payload,
       };
 

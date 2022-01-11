@@ -7,9 +7,8 @@ import Register from "./RegisField";
 import "./style.scss";
 
 const LoginPage = () => {
-  const { loginStatus } = useSelector((store) => store.auth);
-  console.log(`loginStatus`, loginStatus);
-  if (loginStatus) return <Navigate to="/" />;
+  const { login } = useSelector((store) => store.auth);
+  if (login) return <Navigate to="/" />;
   return (
     <>
       <div className="login-page">
