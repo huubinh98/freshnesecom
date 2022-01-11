@@ -46,16 +46,6 @@ const Register = () => {
     }
     setErr(errObj);
 
-    // if (Object.keys(errObj).length === 0) {
-    //   const res = await authService.register(formRegis)
-    //   if (res?.message) {
-    //     return message.error(res.message);
-    //   }
-    //   dispatch({
-    //     type: 'REGIS',
-    //     payload: 
-    //   })
-    // }
     if (Object.keys(errObj).length === 0) {
       try {
         const res = await authService.register(formRegis)
@@ -67,6 +57,12 @@ const Register = () => {
             dispatch({
               type: 'REGIS',
               payload: token,
+            })
+            message.success('Đăng ký thành công');
+            setFormRegis({
+              name: "",
+              username: "",
+              password: "",
             })
           }
         }

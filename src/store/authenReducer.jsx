@@ -6,6 +6,7 @@ const initialState = {
 };
 
 const authenReducer = (state = initialState, action) => {
+<<<<<<< HEAD
   const { type, payload } = action;
   switch (type) {
     case "LOGIN":
@@ -30,6 +31,31 @@ const authenReducer = (state = initialState, action) => {
     default:
       return state;
   }
+=======
+    const { type, payload } = action;
+    switch (type) {
+        case "LOGIN":
+            // handle data
+            localStorage.setItem("token", JSON.stringify(payload));
+            //update state
+            return {
+                login: !!token,
+                loginStatus: true
+            };
+        case "REGIS":
+            return {
+                token: action.payload,
+            };
+        case "LOGOUT":
+            localStorage.removeItem("token");
+            return {
+                login: !!token,
+                loginStatus: false,
+            };
+        default:
+            return state;
+    }
+>>>>>>> master
 };
 
 export default authenReducer;
