@@ -122,6 +122,58 @@ const data = {
     "Fresh food",
     "Lemons",
   ],
+
+  infocheckout: [
+    {
+      id: 1,
+      label: "First name",
+      placeholder: "First name",
+      name: "firstname",
+    },
+    {
+      id: 2,
+      label: "Last name",
+      placeholder: "Last name",
+      name: "lastname",
+    },
+    {
+      id: 3,
+      label: "Email address",
+      placeholder: "Email address",
+      name: "email",
+    },
+    {
+      id: 4,
+      label: "Phone number",
+      placeholder: "Phone number",
+      name: "phone",
+    },
+    {
+      id: 4,
+      label: "Address",
+      placeholder: "Address",
+      name: "address",
+    },
+    {
+      id: 5,
+      label: "Town / City",
+      placeholder: "Town or City",
+      name: "city",
+    },
+    {
+      id: 6,
+      label: "State / Country",
+      placeholder: "Choose a state or Country",
+      name: "country",
+      typeInput: "select",
+    },
+    {
+      id: 7,
+      label: "ZIP/Postal code",
+      placeholder: "Postal code or ZIP",
+      name: "zip",
+    },
+  ],
 };
 
 export default data;
