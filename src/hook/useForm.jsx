@@ -82,7 +82,6 @@ export default function useForm(initialValue, err) {
     }
 
     setError(errObj);
-
     return errObj;
   };
 
@@ -94,20 +93,20 @@ export default function useForm(initialValue, err) {
     }
   };
 
-  const [errOption, setErrOption] = useState({});
+  const [errOption, setErrOption] = useState();
 
-  const handleSubmitOption = (callbackFunc) => (e) => {
+  const handleSubmitOption = (e) => {
     e.preventDefault();
-
+    console.log(1)
     let errObj = {};
-    let errInfoObj = validate();
+    // let errInfoObj = validate();
     if (!selectedOption) {
       errObj.catchErr = "Please choose an option";
     }
 
-    if (Object.keys(errInfoObj).length === 0) {
-      callbackFunc(form);
-    }
+    // if (Object.keys(errInfoObj).length === 0) {
+    //   callbackFunc(form);
+    // }
     setErrOption(errObj);
   };
 
