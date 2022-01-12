@@ -34,6 +34,22 @@
                     color: $black15;
                 }
             }
+
+            p {
+                margin-right: 5px;
+            }
+
+            span {
+                margin-right: 5px;
+            }
+            button {
+                outline: none;
+                background: transparent;
+                border: none;
+                cursor: pointer;
+                @include text(var(--body12-fs), psb, var(--body12-lh), inherit, none);
+
+            }
         }
     }
 

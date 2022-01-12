@@ -29,16 +29,7 @@ export default function HeaderContact({ props, item }) {
         </li>
       </ul>
       <ul className="header__contact-list">
-        {/* <li>
-          {login ? (
-            <>
-              account: {name}
-              <button onClick={() => setLogin(false)}>Logout</button>
-            </>
-          ) : (
-            ""
-          )}
-        </li> */}
+      
         <li className="header__contact-item">
           <Link to="/blogpage">Blog</Link>
         </li>
@@ -55,6 +46,7 @@ export default function HeaderContact({ props, item }) {
           {userInfo?.name && loginStatus ?
             <>
               <p>{userInfo.name}</p>
+              <span>/</span>
               <button onClick={handleLogout}>Logout</button>
             </> : ''
           }
