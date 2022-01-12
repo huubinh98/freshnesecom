@@ -1,14 +1,15 @@
-import React, { useState } from "react";
+import React, { forwardRef, useImperativeHandle, useState } from "react";
 import Button from "../../../components/Button";
 import Input from "../../../components/Input";
 import { delay } from "../../../components/utils";
 import useForm from "../../../hook/useForm";
+import data from "../../../mocks";
 
 import "./style.scss";
 
-export default function Info() {
+const Info = forwardRef((props, ref) => {
   const [isFetChing, setIsFetChing] = useState(false);
-  const { handleSubmit, register } = useForm({
+  const { handleSubmit, register, validate } = useForm({
     firstname: "",
     lastname: "",
     email: "",
@@ -19,64 +20,22 @@ export default function Info() {
     zip: "",
   });
 
-  const affterHandleSubmit = async (form) => {
-    setIsFetChing(true);
-    await delay(1000);
-    setIsFetChing(false);
-    console.log(form);
-  };
+  const { infocheckout } = data;
 
-  const data = [
-    {
-      id: 1,
-      label: "First name",
-      placeholder: "First name",
-      name: "firstname",
+  useImperativeHandle(
+    ref,
+    () => {
+      return { validate };
     },
-    {
-      id: 2,
-      label: "Last name",
-      placeholder: "Last name",
-      name: "lastname",
-    },
-    {
-      id: 3,
-      label: "Email address",
-      placeholder: "Email address",
-      name: "email",
-    },
-    {
-      id: 4,
-      label: "Phone number",
-      placeholder: "Phone number",
-      name: "phone",
-    },
-    {
-      id: 4,
-      label: "Address",
-      placeholder: "Address",
-      name: "address",
-    },
-    {
-      id: 5,
-      label: "Town / City",
-      placeholder: "Town or City",
-      name: "city",
-    },
-    {
-      id: 6,
-      label: "State / Country",
-      placeholder: "Choose a state or Country",
-      name: "country",
-      typeInput: "select",
-    },
-    {
-      id: 7,
-      label: "ZIP/Postal code",
-      placeholder: "Postal code or ZIP",
-      name: "zip",
-    },
-  ];
+    [validate]
+  );
+
+  // const affterHandleSubmit = async (form) => {
+  //   setIsFetChing(true);
+  //   await delay(1000);
+  //   setIsFetChing(false);
+  //   console.log(form);
+  // };
 
   return (
     <div className="checkout__info">
@@ -85,9 +44,9 @@ export default function Info() {
         <p>Please enter your billing info</p>
         <p>Step 1 of 5</p>
       </div>
-
-      <form onSubmit={handleSubmit(affterHandleSubmit)}>
-        {data.map((item, i) => {
+      {/* onSubmit={handleSubmit(affterHandleSubmit)} */}
+      <form>
+        {infocheckout.map((item, i) => {
           return (
             <Input
               type="type"
@@ -106,4 +65,6 @@ export default function Info() {
       </form>
     </div>
   );
-}
+});
+
+export default Info;

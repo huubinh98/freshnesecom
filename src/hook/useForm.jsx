@@ -7,14 +7,15 @@ const regexPhone = /(84|0[3|5|7|8|9])+([0-9]{8})\b/;
 
 const regexZip = /^[1-9][0-9][0-9][0-9][0-9][0-9]?$|^100$/;
 
-const regexCreditCard = /^(5[1-5][0-9]{14}|2(22[1-9][0-9]{12}|2[3-9][0-9]{13}|[3-6][0-9]{14}|7[0-1][0-9]{13}|720[0-9]{12}))$/;
+const regexCreditCard =
+  /^(5[1-5][0-9]{14}|2(22[1-9][0-9]{12}|2[3-9][0-9]{13}|[3-6][0-9]{14}|7[0-1][0-9]{13}|720[0-9]{12}))$/;
 
 const regexExpireDate = /^(0[1-9]|1[0-2])\/?([0-9]{4}|[0-9]{2})$/;
 
 export default function useForm(initialValue, err) {
   const [form, setForm] = useState(initialValue);
   const [error, setError] = useState({ err });
-  const [selectedOption, setSelectedOption] = useState('');
+  const [selectedOption, setSelectedOption] = useState("");
 
   const register = (name) => {
     return {
@@ -101,14 +102,14 @@ export default function useForm(initialValue, err) {
     let errObj = {};
     let errInfoObj = validate();
     if (!selectedOption) {
-      errObj.catchErr = 'Please choose an option'
+      errObj.catchErr = "Please choose an option";
     }
 
     if (Object.keys(errInfoObj).length === 0) {
       callbackFunc(form);
     }
-    setErrOption(errObj)
-  }
+    setErrOption(errObj);
+  };
 
   return {
     handleSubmit,
@@ -116,6 +117,7 @@ export default function useForm(initialValue, err) {
     selectedOption,
     setSelectedOption,
     handleSubmitOption,
-    errOption
+    errOption,
+    validate,
   };
 }

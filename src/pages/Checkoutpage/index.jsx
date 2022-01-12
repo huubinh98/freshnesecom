@@ -1,9 +1,8 @@
-import React from "react";
+import React, { useRef } from "react";
 import Button from "../../components/Button";
 import DropdownMenu from "../../components/DropdownMenu";
 import Header from "../../components/Header";
 import { Security } from "../../components/Icon";
-import Input from "../../components/Input";
 import Addition from "./Addition";
 import BillMethod from "./BillMethod";
 import Confirmation from "./Confirmation";
@@ -13,6 +12,22 @@ import Payment from "./Payment";
 import "./style.scss";
 
 const CheckoutPage = () => {
+  const infoRef = useRef();
+  // const billMethodRef = useRef();
+  // const paymentRef = useRef();
+  // const additionRef = useRef();
+  // const confirmRef = useRef();
+
+  const submitCheckout = () => {
+    const errObject = {
+      ...infoRef.current?.validate(),
+    };
+
+    if (Object.keys(errObject).length === 0) {
+      alert("api");
+    }
+  };
+
   return (
     <>
       <Header />
@@ -20,12 +35,14 @@ const CheckoutPage = () => {
       <main className="checkoutpage">
         <div className="container">
           <div className="checkout__form">
-            <Info />
+            <Info ref={infoRef} />
             <BillMethod />
             <Payment />
             <Addition />
             <Confirmation />
-            <Button size="large">Complete order</Button>
+            <Button size="large" onClick={submitCheckout}>
+              Complete order
+            </Button>
             <div className="security-policy">
               <Security />
               <p>All your data are safe</p>

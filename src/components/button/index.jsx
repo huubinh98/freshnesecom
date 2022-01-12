@@ -10,6 +10,7 @@ export default function Button({
   round = true,
   icon,
   loading,
+  onClick,
 }) {
   return (
     <button
@@ -21,6 +22,7 @@ export default function Button({
         { round }
       )}
       disabled={loading}
+      onClick={onClick}
     >
       {type === "icon-left" && icon}
       {children}
