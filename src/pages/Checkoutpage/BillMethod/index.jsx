@@ -25,8 +25,6 @@ const BillMethod = () => {
 
     console.log('selectedOption :>> ', selectedOption);
 
-
-
     return (
         <div className="billing-method">
             <h2 className='heading'>Billing method</h2>
