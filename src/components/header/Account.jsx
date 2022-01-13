@@ -5,9 +5,7 @@ import { IconUserLogin } from "../Icon";
 import { IconAccount } from "../Icon";
 
 export default function Account() {
-  const { login } = useSelector((store) => store.auth);
-  // if (login) return <Navigate to="/checkoutpage" />;
-  // const { loginStatus } = useSelector((state) => state.auth);
+  const { login } = useSelector((state) => state.auth);
   return (
     <div>
       <Link to={login ? `/checkoutpage` : `/login`}>

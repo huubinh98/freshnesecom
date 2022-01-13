@@ -35,24 +35,7 @@ export default function CategoryMenu({ isBanner }) {
           );
         })}
       </ul>
-
-      {/* <ul className="cate__list">
-        <li className="cate__list-item">
-          <Link to={"/categories"}>Bakery</Link>
-        </li>
-        <li className="cate__list-item">
-          <Link to="/">Fruit and vegetables</Link>
-        </li>
-        <li className="cate__list-item">
-          <Link to="/">Meat and fish</Link>
-        </li>
-        <li className="cate__list-item">
-          <Link to={"/"}>Drinks</Link>
-        </li>
-        <li className="cate__list-item">
-          <Link to={"/"}>Kitchen</Link>
-        </li>
-      </ul> */}
+      
       <Link to={"/categories"}>
         <Button
           color="bright"

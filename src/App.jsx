@@ -11,6 +11,7 @@ import { AuthProvider } from "./context/AuthContext";
 import CategoriesPage from "./pages/CategoriesPage";
 import { Provider, useSelector } from "react-redux";
 import store from "./store";
+import ProductDetail from "./pages/ProductDetail";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             <Route index element={<HomePage />} />
             <Route path="/blogpage" element={<BlogPage />} />
             <Route path="/categories" element={<CategoriesPage />} />
+            <Route path="/detail" element={<ProductDetail />} />
           </Route>
           <Route path="/checkoutpage" element={<CheckoutPage />} />
           <Route path="/login" element={<LoginPage />} />
