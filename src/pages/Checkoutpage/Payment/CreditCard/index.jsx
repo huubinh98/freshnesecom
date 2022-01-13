@@ -4,8 +4,8 @@ import './style.scss'
 
 const CreditCard = () => {
     return (
-        <div>
-            <form action="">
+        <>
+            <form>
                 <Input label='Card number' placeholder="Card Number" />
                 <div className="card-info">
                     <div className="left">
@@ -18,7 +18,7 @@ const CreditCard = () => {
                     </div>
                 </div>
             </form>
-        </div>
+        </>
     )
 }
 
