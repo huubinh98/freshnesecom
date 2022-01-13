@@ -30,6 +30,8 @@ const Info = forwardRef((props, ref) => {
     [validate]
   );
 
+  console.log(validate);
+
   // const affterHandleSubmit = async (form) => {
   //   setIsFetChing(true);
   //   await delay(1000);

@@ -21,4 +21,8 @@
         display: inline-block;
         margin-bottom: 16px;
     }
+
+    .error {
+        @include text(var(--body12-fs), psb, var(--body12-lh), red, none);
+    }
 }

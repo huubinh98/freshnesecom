@@ -29,7 +29,6 @@ export default function HeaderContact({ props, item }) {
         </li>
       </ul>
       <ul className="header__contact-list">
-      
         <li className="header__contact-item">
           <Link to="/blogpage">Blog</Link>
         </li>
@@ -38,9 +37,6 @@ export default function HeaderContact({ props, item }) {
         </li>
         <li className="header__contact-item">
           <Link to="/blogpage">Carrers</Link>
-        </li>
-        <li className="header__contact-item">
-          <Link to="/checkoutpage">Checkout</Link>
         </li>
         <li className="header__contact-item">
           {userInfo?.name && login ? (

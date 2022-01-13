@@ -1,20 +1,20 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { IconUserLogin } from "../Icon";
 import { IconAccount } from "../Icon";
 
 export default function Account() {
-  const { loginStatus } = useSelector((state) => state.auth);
+  const { login } = useSelector((store) => store.auth);
+  // if (login) return <Navigate to="/checkoutpage" />;
+  // const { loginStatus } = useSelector((state) => state.auth);
   return (
     <div>
-      <Link to="/login">
+      <Link to={login ? `/checkoutpage` : `/login`}>
         {/* <div style={{ color: `${loginStatus ? "red" : "black"}` }}>
           <IconAccount />
         </div> */}
-        {
-          loginStatus ? <IconUserLogin /> : <IconAccount />
-        }
+        {login ? <IconUserLogin /> : <IconAccount />}
       </Link>
     </div>
   );

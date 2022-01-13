@@ -13,14 +13,19 @@ import "./style.scss";
 
 const CheckoutPage = () => {
   const infoRef = useRef();
-  // const billMethodRef = useRef();
-  // const paymentRef = useRef();
+  const billMethodRef = useRef();
+  const paymentRef = useRef();
+  // console.log(`paymentRef`, paymentRef);
   // const additionRef = useRef();
-  // const confirmRef = useRef();
+  const confirmRef = useRef();
 
   const submitCheckout = () => {
+    console.log(`billMethodRef`, billMethodRef);
     const errObject = {
       ...infoRef.current?.validate(),
+      ...billMethodRef.current?.validateRadio(),
+      ...paymentRef.current?.validateRadio(),
+      ...confirmRef.current?.handleSubmit(),
     };
 
     if (Object.keys(errObject).length === 0) {
@@ -36,10 +41,10 @@ const CheckoutPage = () => {
         <div className="container">
           <div className="checkout__form">
             <Info ref={infoRef} />
-            <BillMethod />
-            <Payment />
+            <BillMethod ref={billMethodRef} />
+            <Payment ref={paymentRef} />
             <Addition />
-            <Confirmation />
+            <Confirmation ref={confirmRef} />
             <Button size="large" onClick={submitCheckout}>
               Complete order
             </Button>
