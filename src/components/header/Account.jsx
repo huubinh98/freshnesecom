@@ -5,7 +5,7 @@ import { IconUserLogin } from "../Icon";
 import { IconAccount } from "../Icon";
 
 export default function Account() {
-  const { loginStatus } = useSelector((state) => state.auth);
+  const { login } = useSelector((state) => state.auth);
   return (
     <div>
       <Link to="/login">
@@ -13,7 +13,7 @@ export default function Account() {
           <IconAccount />
         </div> */}
         {
-          loginStatus ? <IconUserLogin /> : <IconAccount />
+          login ? <IconUserLogin /> : <IconAccount />
         }
       </Link>
     </div>

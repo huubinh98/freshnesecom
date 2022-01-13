@@ -7,13 +7,14 @@ import Tags from "../Tags";
 import { Rating } from "@mui/material";
 import classNames from "classnames";
 import { numberWithCommas } from "../utils";
+import { Link } from "react-router-dom";
 
 export default function ProductItem({ star = "default", productCart = [] }) {
   return (
     <>
       {productCart.map((item) => {
         return (
-          <a href="#/" key={item.id}>
+          <Link to='/detail' key={item.id}>
             <div className={classNames(`pro__item star-${star}`)}>
               <div className="pro__item-img">
                 <img src={item.thumbnail_url} alt="" />
@@ -36,7 +37,7 @@ export default function ProductItem({ star = "default", productCart = [] }) {
                 </div>
               </div>
             </div>
-          </a>
+          </Link>
         );
       })}
     </>

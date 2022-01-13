@@ -15,7 +15,7 @@ export default function BestProduct() {
 
   return (
     <div className="pro__list">
-      <ProductItem productCart={getProduct} />
+      <ProductItem productCart={getProduct.slice(1, 7)} />
     </div>
   );
 }

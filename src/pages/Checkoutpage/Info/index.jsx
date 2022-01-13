@@ -1,15 +1,15 @@
 import React, { forwardRef, useImperativeHandle, useState } from "react";
-import Button from "../../../components/Button";
+// import Button from "../../../components/Button";
 import Input from "../../../components/Input";
-import { delay } from "../../../components/utils";
+// import { delay } from "../../../components/utils";
 import useForm from "../../../hook/useForm";
 import data from "../../../mocks";
 
 import "./style.scss";
 
 const Info = forwardRef((props, ref) => {
-  const [isFetChing, setIsFetChing] = useState(false);
-  const { handleSubmit, register, validate } = useForm({
+  // const [isFetChing, setIsFetChing] = useState(false);
+  const { register, validate } = useForm({
     firstname: "",
     lastname: "",
     email: "",

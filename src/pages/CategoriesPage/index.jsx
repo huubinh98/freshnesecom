@@ -11,6 +11,8 @@ import productService from '../../service/productService'
 const CategoriesPage = () => {
 
     const [getProduct, setGetProduct] = useState([]);
+    const [getCategory, setGetCategory] = useState([]);
+
     useEffect(() => {
         (async () => {
             const resPro = await productService.getProduct();
@@ -18,6 +20,17 @@ const CategoriesPage = () => {
             setGetProduct(dataPro);
         })();
     }, []);
+
+    useEffect(() => {
+        fechProduct();
+    }, [])
+
+    const fechProduct = async () => {
+        const res = await productService.getCategory();
+        setGetCategory(res);
+    }
+    let temp = getCategory.slice(1, 7);
+    // console.log(getCategory);
 
     return (
         <div className="categoriesPage">
@@ -58,24 +71,14 @@ const CategoriesPage = () => {
                 <div className="categories_content">
                     <div className="categories_content-sidebar">
                         <ul className="categories_list">
-                            <h3 className='sidebar-title'>Categories</h3>
-                            <li className="categories-item">
-                                <span>Category Name</span>
-                                <Tags itemTag='320' color='green' size='small' />
-                            </li>
-                            <li className="categories-item">
-                                <span>Category Name</span>
-                                <Tags itemTag='112' color='green' size='small' />
-                            </li>
-                            <li className="categories-item">
-                                <span>Category Name</span>
-                                <Tags itemTag='32' color='green' size='small' />
-                            </li>
-                            <li className="categories-item">
-                                <span>Category Name</span>
-                                <Tags itemTag='48' color='green' size='small' />
-                            </li>
-
+                            {temp.map((e, i) => {
+                                return (
+                                    <li className="categories-item" key={i}>
+                                        <span>{e.title}</span>
+                                        <Tags itemTag='320' color='green' size='small' />
+                                    </li>
+                                );
+                            })}
                         </ul>
 
                         <ul className="brand_list">
